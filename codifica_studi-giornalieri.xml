@@ -36,7 +36,7 @@
 				<!-- <unpub>Il contenuto del presente file non è pubblicato.</unpub>-->
 			</pubStmt>
 			<notesStmt xml:id="m-12"><!-- notes on other aspects of the resource -->
-				<annot xml:id="m-13">Le trascrizioni delle musiche degli 'studi giornalieri' sono ricavate da <ref target="#Mantica2020">Mantica 2020</ref>; il testo musicale della partitura dei 'Puritani' è invece tratto dall'<ref target="#DellaSeta2013">edizione critica a cura di Fabrizio Della Seta</ref>.</annot>
+				<annot xml:id="m-13">Le trascrizioni delle musiche degli 'studi giornalieri' sono ricavate da <ref target="#Mantica2020">Mantica 2020</ref>;il testo musicale della partitura dei 'Puritani' è invece tratto dall'<ref target="#DellaSeta2013">edizione critica a cura di Fabrizio Della Seta</ref>.</annot>
 				<annot xml:id="m-14">Le riproduzioni fotografiche del manoscritto degli 'studi giornalieri' sono di proprietà del Museo Belliniano di Catania.</annot>
 			</notesStmt>
 			<sourceDesc xml:id="m-15"><!-- information about the source(s) from which the resource was derived -->
@@ -53,8 +53,8 @@
 						<locus>ff. 3-4</locus>
 					</bibl>
 				</source>
-				<source n="2" xml:id="m-17">
-					<biblStruct xml:id="Mantica2020" target="http://www.bollettinostudibelliniani.eu/wp-content/uploads/2021/04/04-Mantica.pdf">
+				<source n="2" xml:id="Mantica2020" >
+					<biblStruct xml:id="m-17" target="http://www.bollettinostudibelliniani.eu/wp-content/uploads/2021/04/04-Mantica.pdf">
 						<analytic>
 							<author corresp="#CBM">
 								<persName>
@@ -77,8 +77,8 @@
 						</monogr>
 					</biblStruct>
 				</source>
-				<source n="3" xml:id="m-18">
-					<biblStruct xml:id="DellaSeta2013">
+				<source xml:id="DellaSeta2013" n="3">
+					<biblStruct xml:id="m-18">
 						<monogr>
 							<title level="m">I Puritani</title>
 							<author type="composer" corresp="#VB">
@@ -332,7 +332,7 @@
 			</manifestationList>
 		</meiHead>
 
-		<music meiversion="5.0"><!-- descrizione della prima trascrizione -->
+		<music meiversion="5.0">
 			<!-- GENETIC STAGES DESCRIPTION -->
 			<genDesc ordered="true">
 				<!-- 'Studi Giornalieri': studio 3, I -->
@@ -381,27 +381,27 @@
 				</genState>
 			</genDesc>
 
-			<group>
+			<group><!-- descrizione della prima trascrizione -->
 				<music> <!-- Codifica di 3, I -->
 					<front>
 						<div type="sigle_belliniane"><!-- sigle di Bellini -->
-							<p n="1" xml:id="sigla1" resp="#CBM">
+							<p n="1" xml:id="sigla1">
 								<choice>
-									<abbr>C: ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C: ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="2" xml:id="sigla2" resp="#CBM">
+							<p n="2" xml:id="sigla2">
 								<choice>
-									<abbr>C. ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C. ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="3" xml:id="sigla3"  resp="#CBM">
+							<p n="3" xml:id="sigla3">
 								<del rend="x-through">
 									<choice>
-										<abbr>P T</abbr>
-										<expan>Pezzi Teatrali</expan>
+										<abbr source="#Mantica2020" type="contraction">P T</abbr>
+										<expan source="#Mantica2020" resp="#CBM">Pezzi Teatrali</expan>
 									</choice>	
 								</del>
 							</p>
@@ -418,27 +418,29 @@
 					<body>
 						<mdiv xml:id="studio_3-I" type="preliminary_sketch" corresp="#s_1a">
 							<score xml:id="m-27">
-								<supplied resp="#CBM">
-									<scoreDef xml:id="m-28" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
-										<staffGrp xml:id="m-29">
-											<staffGrp xml:id="m-40" n="1" symbol="brace">
-												<staffDef xml:id="m-30" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="1">
-													<label xml:id="m-31">Motivo annotato</label>
-													<instrDef xml:id="m-34" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-												<staffDef xml:id="m-35" clef.line="4" clef.shape="F" key.mode="major" keysig="2f" lines="5" n="2">
-													<label xml:id="m-36">Accompagnamento o struttura armonica</label>
-													<instrDef xml:id="m-39" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-											</staffGrp>
+								<scoreDef xml:id="m-28" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
+									<staffGrp xml:id="m-29">
+										<staffGrp xml:id="m-40" n="1" symbol="brace">
+											<staffDef xml:id="m-30" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="1">
+												<label xml:id="m-31">Motivo annotato</label>
+												<instrDef xml:id="m-34" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
+											<staffDef xml:id="m-35" clef.line="4" clef.shape="F" key.mode="major" keysig="2f" lines="5" n="2">
+												<label xml:id="m-36">Accompagnamento o struttura armonica</label>
+												<instrDef xml:id="m-39" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
 										</staffGrp>
-									</scoreDef>
-								</supplied>
+									</staffGrp>
+								</scoreDef>
 								<section n="1" xml:id="m-41">
-										<relation type="editorial" rel="preceding" plist="#studio3-1" target="#studio3-7 #studio3-8 #studio3-9 #edizione-critica"/>
-										<pb xml:id="m-43"/>
+									<relation type="editorial" rel="preceding" plist="#studio3-1" target="#studio3-7 #studio3-8 #studio3-9 #edizione-critica"/>
+									<pb xml:id="m-43"/>
 									<measure xml:id="m-42" n="1">
 										<staff xml:id="m-44" n="1">
+											<supplied resp="#CBM">
+												<clef line="2" shape="G"/>
+												<meterSig count="4" unit="4"/>
+											</supplied>
 											<layer xml:id="m-45" n="1">
 												<rest xml:id="m-46" dur="2" dur.ppq="512" tstamp.real="00:00:00"/>
 												<rest xml:id="m-47" dur="4" dur.ppq="256" tstamp.real="00:00:01.2"/>
@@ -447,6 +449,10 @@
 											</layer>
 										</staff>
 										<staff xml:id="m-55" n="2">
+											<supplied resp="#CBM">
+												<clef line="4" shape="F"/>
+												<meterSig count="4" unit="4"/>
+											</supplied>
 											<layer xml:id="m-56" n="1">
 												<rest xml:id="m-57" dur="8" dur.ppq="128" tstamp.real="00:00:00"/>
 												<chord xml:id="m-61" dur="8" dur.ppq="128" stem.dir="up" tstamp.real="00:00:00.3">
@@ -466,7 +472,7 @@
 											</layer>
 										</staff>
 										<dir xml:id="m-54" label="lyrics" layer="1" staff="1" startid="#m-48" tstamp="3.4961">Vieni abbracciami</dir>
-										<tempo xml:id="m-68" layer="1" tstamp="1">And[an]te</tempo>
+										<tempo xml:id="m-68" layer="1" tstamp="1">And<supplied resp="#CBM">an</supplied>te</tempo>
 									</measure>
 									<measure xml:id="m-73" n="2">
 										<staff xml:id="m-74" n="1">
@@ -832,23 +838,23 @@
 				<music> <!-- Codifica di 3, VII -->
 					<front>
 						<div type="sigle_belliniane"><!-- sigle di Bellini -->
-							<p n="1" corresp="sigla1" resp="#CBM">
+							<p n="1" corresp="sigla1">
 								<choice>
-									<abbr>C: ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C: ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="2" corresp="sigla2" resp="#CBM">
+							<p n="2" corresp="sigla2">
 								<choice>
-									<abbr>C. ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C. ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="3" corresp="sigla3"  resp="#CBM">
+							<p n="3" corresp="sigla3">
 								<del rend="x-through">
 									<choice>
-										<abbr>P T</abbr>
-										<expan>Pezzi Teatrali</expan>
+										<abbr source="#Mantica2020" type="contraction">P T</abbr>
+										<expan source="#Mantica2020" resp="#CBM" cert="low">Pezzi Teatrali</expan>
 									</choice>	
 								</del>
 							</p>
@@ -865,28 +871,30 @@
 					<body>
 						<mdiv xml:id="studio_3-VII" type="preliminary_sketch" corresp="#s_1b">
 							<score xml:id="m-320">
-								<supplied resp="#CBM">
-									<scoreDef xml:id="m-321" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
-										<staffGrp xml:id="m-322">
-											<staffGrp xml:id="m-333" n="1" symbol="brace">
-												<staffDef xml:id="m-323" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2s" lines="5" n="1">
-													<label xml:id="m-324">Motivo annotato</label>
-													<instrDef xml:id="m-327" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-												<staffDef xml:id="m-328" clef.line="4" clef.shape="F" clef.visible="false" key.mode="major" keysig="2s" lines="5" n="2">
-													<label xml:id="m-329">Accompagnamento o struttura amonica</label>
-													<instrDef xml:id="m-332" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-											</staffGrp>
+								<scoreDef xml:id="m-321" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
+									<staffGrp xml:id="m-322">
+										<staffGrp xml:id="m-333" n="1" symbol="brace">
+											<staffDef xml:id="m-323" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2s" lines="5" n="1">
+												<label xml:id="m-324">Motivo annotato</label>
+												<instrDef xml:id="m-327" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
+											<staffDef xml:id="m-328" clef.line="4" clef.shape="F" clef.visible="false" key.mode="major" keysig="2s" lines="5" n="2">
+												<label xml:id="m-329">Accompagnamento o struttura amonica</label>
+												<instrDef xml:id="m-332" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
 										</staffGrp>
-									</scoreDef>
-								</supplied>
+									</staffGrp>
+								</scoreDef>
 								<section n="2" xml:id="m-334">
 									<relation type="editorial" rel="hasSuccessor" plist="#studio3-7" target="#studio3-8"/>
 									<relation type="editorial" rel="isSuccessorOf" plist="#studio3-7" target="#studio3-1"/>
 									<scoreDef xml:id="m-356" keysig="2s"/>
 									<measure xml:id="m-336" n="17">
 										<staff xml:id="m-339" n="1">
+											<supplied resp="#CBM">
+												<clef line="2" shape="G"/>
+												<meterSig count="4" unit="4"/>
+											</supplied>
 											<layer xml:id="m-340" n="1">
 												<rest xml:id="m-341" dur="2" dur.ppq="512" tstamp.real="00:00:40.8"/>
 												<rest xml:id="m-342" dur="4" dur.ppq="256" tstamp.real="00:00:42"/>
@@ -904,6 +912,10 @@
 											</layer>
 										</staff>
 										<staff xml:id="m-350" n="2" visible="false">
+											<supplied resp="#CBM">
+												<clef line="4" shape="F"/>
+												<meterSig count="4" unit="4"/>
+											</supplied>
 											<layer xml:id="m-351" n="1">
 												<mRest xml:id="m-352" tstamp.real="00:00:40.8"/>
 											</layer>
@@ -1086,23 +1098,23 @@
 				<music> <!-- Codifica di 3, VIII -->
 					<front>
 						<div type="sigle_belliniane"><!-- sigle di Bellini -->
-							<p n="1" corresp="sigla1" resp="#CBM">
+							<p n="1" corresp="sigla1">
 								<choice>
-									<abbr>C: ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C: ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="2" corresp="sigla2" resp="#CBM">
+							<p n="2" corresp="sigla2">
 								<choice>
-									<abbr>C. ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C. ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="3" corresp="sigla3"  resp="#CBM">
+							<p n="3" corresp="sigla3">
 								<del rend="x-through">
 									<choice>
-										<abbr>P T</abbr>
-										<expan>Pezzi Teatrali</expan>
+										<abbr source="#Mantica2020" type="contraction">P T</abbr>
+										<expan source="#Mantica2020" resp="#CBM" cert="low">Pezzi Teatrali</expan>
 									</choice>	
 								</del>
 							</p>
@@ -1119,28 +1131,30 @@
 					<body>
 						<mdiv xml:id="studio_3-VIII" type="preliminary_sketch" corresp="#s_1c">
 							<score xml:id="m-463">
-								<supplied resp="#CBM">
-									<scoreDef xml:id="m-464" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
-										<staffGrp xml:id="m-465">
-											<staffGrp xml:id="m-476" n="1" symbol="brace">
-												<staffDef xml:id="m-466" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="1">
-													<label xml:id="m-467">Motivo annotato</label>
-													<instrDef xml:id="m-470" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-												<staffDef xml:id="m-471" clef.line="4" clef.shape="F" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="2">
-													<label xml:id="m-472">Accompagnamento o struttura armonica</label>
-													<instrDef xml:id="m-475" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-											</staffGrp>
+								<scoreDef xml:id="m-464" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
+									<staffGrp xml:id="m-465">
+										<staffGrp xml:id="m-476" n="1" symbol="brace">
+											<staffDef xml:id="m-466" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="1">
+												<label xml:id="m-467">Motivo annotato</label>
+												<instrDef xml:id="m-470" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
+											<staffDef xml:id="m-471" clef.line="4" clef.shape="F" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="2">
+												<label xml:id="m-472">Accompagnamento o struttura armonica</label>
+												<instrDef xml:id="m-475" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
 										</staffGrp>
-									</scoreDef>
-								</supplied>
+									</staffGrp>
+								</scoreDef>
 								<section n="3" xml:id="m-477">
 									<relation type="editorial" rel="hasSuccessor" plist="#studio3-8" target="#studio3-9"/>
 									<relation type="editorial" rel="isSuccessorOf" plist="#studio3-8" target="#studio3-7"/>
 									<scoreDef xml:id="m-494" keysig="2f"/>
 									<measure xml:id="m-479" label="23" metcon="false" n="24">
 										<staff xml:id="m-482" n="1">
+											<supplied resp="#CBM">
+												<clef line="2" shape="G"/>
+												<meterSig count="4" unit="4"/>
+											</supplied>
 											<layer xml:id="m-483" n="1">
 												<beam xml:id="m-485">
 													<note xml:id="m-484" dots="1" dur="8" dur.ppq="192" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:01:00" vel="0"/>
@@ -1151,6 +1165,10 @@
 											</layer>
 										</staff>
 										<staff xml:id="m-488" n="2" visible="false">
+											<supplied resp="#CBM">
+												<clef line="4" shape="F"/>
+												<meterSig count="4" unit="4"/>
+											</supplied>
 											<layer xml:id="m-489" n="1">
 												<mRest xml:id="m-490" tstamp.real="00:01:00"/>
 											</layer>
@@ -1357,23 +1375,23 @@
 				<music> <!-- Codifica di 3, IX -->
 					<front>
 						<div type="sigle_belliniane"><!-- sigle di Bellini -->
-							<p n="1" corresp="sigla1" resp="#CBM">
+							<p n="1" corresp="sigla1">
 								<choice>
-									<abbr>C: ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C: ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="2" corresp="sigla2" resp="#CBM">
+							<p n="2" corresp="sigla2">
 								<choice>
-									<abbr>C. ed ag.</abbr>
-									<expan>Cantato ed agito</expan>
+									<abbr source="#Mantica2020" type="contraction">C. ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
 								</choice>
 							</p>
-							<p n="3" corresp="sigla3"  resp="#CBM">
+							<p n="3" corresp="sigla3">
 								<del rend="x-through">
 									<choice>
-										<abbr>P T</abbr>
-										<expan>Pezzi Teatrali</expan>
+										<abbr source="#Mantica2020" type="contraction">P T</abbr>
+										<expan source="#Mantica2020" resp="#CBM" cert="low">Pezzi Teatrali</expan>
 									</choice>	
 								</del>
 							</p>
@@ -1390,28 +1408,30 @@
 					<body>
 						<mdiv xml:id="studio_3-IX" type="preliminary_sketch" corresp="#s_1d">
 							<score xml:id="m-621">
-								<supplied resp="#CBM">
-									<scoreDef xml:id="m-622" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
-										<staffGrp xml:id="m-623">
-											<staffGrp xml:id="m-634" n="1" symbol="brace">
-												<staffDef xml:id="m-624" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="1">
-													<label xml:id="m-625">Motivo annotato</label>
-													<instrDef xml:id="m-628" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-												<staffDef xml:id="m-629" clef.line="4" clef.shape="F" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="2">
-													<label xml:id="m-630">Accompagnamento o struttura armonica</label>
-													<instrDef xml:id="m-633" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-											</staffGrp>
+								<scoreDef xml:id="m-622" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
+									<staffGrp xml:id="m-623">
+										<staffGrp xml:id="m-634" n="1" symbol="brace">
+											<staffDef xml:id="m-624" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="1">
+												<label xml:id="m-625">Motivo annotato</label>
+												<instrDef xml:id="m-628" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
+											<staffDef xml:id="m-629" clef.line="4" clef.shape="F" clef.visible="false" key.mode="major" keysig="2f" lines="5" n="2">
+												<label xml:id="m-630">Accompagnamento o struttura armonica</label>
+												<instrDef xml:id="m-633" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
 										</staffGrp>
-									</scoreDef>
-								</supplied>
+									</staffGrp>
+								</scoreDef>
 								<del resp="#VB" type="strikethrough" hand="#VB_brownInk1">
 									<section n="4" xml:id="m-635">
 										<relation type="editorial" rel="hasSuccessor" plist="#studio3-9" target="#studio4-3"/>
 										<relation type="editorial" rel="isSuccessorOf" plist="#studio3-9" target="#studio3-8"/>
 										<measure xml:id="m-637" label="32" n="33">
 											<staff xml:id="m-640" n="1">
+												<supplied resp="#CBM">
+													<clef line="2" shape="G"/>
+													<meterSig count="4" unit="4"/>
+												</supplied>
 												<layer xml:id="m-641" n="1">
 													<rest xml:id="m-642" dur="2" dur.ppq="512" tstamp.real="00:01:22.2"/>
 													<rest xml:id="m-643" dur="4" dur.ppq="256" tstamp.real="00:01:23.4"/>
@@ -1424,6 +1444,10 @@
 												</layer>
 											</staff>
 											<staff xml:id="m-648" n="2" visible="false">
+												<supplied resp="#CBM">
+													<clef line="4" shape="F"/>
+													<meterSig count="4" unit="4"/>
+												</supplied>
 												<layer xml:id="m-649" n="1">
 													<mRest xml:id="m-650" tstamp.real="00:01:22.2"/>
 												</layer>
@@ -1547,9 +1571,9 @@
 					<front>
 						<div type="sigle_belliniane"><!-- sigle di Bellini -->
 							<p n="1" xml:id="sigla4">
-								<choice >
-									<abbr hand="#VB_brownInk2">C:to ed ag.</abbr>
-									<expan resp="#CBM" cert="low">Cantato ed agito</expan>
+								<choice>
+									<abbr source="#Mantica2020" type="contraction" hand="#VB_brownInk2">C:to ed ag.</abbr>
+									<expan source="#Mantica2020" resp="#CBM" cert="low">Cantato ed agito</expan>
 								</choice>
 							</p>
 						</div>
@@ -1565,22 +1589,20 @@
 					<body>
 						<mdiv xml:id="studio_4-III" type="section_sketch" corresp="#s_1e">
 							<score xml:id="m-726">
-								<supplied resp="#CBM">
-									<scoreDef xml:id="m-727" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
-										<staffGrp xml:id="m-728">
-											<staffGrp xml:id="m-739" n="1" symbol="brace">
-												<staffDef xml:id="m-729" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="0" lines="5" n="1">
-													<label xml:id="m-730">Motivo annotato</label>
-													<instrDef xml:id="m-733" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-												<staffDef xml:id="m-734" clef.line="4" clef.shape="F"  key.mode="major" keysig="0" lines="5" n="2">
-													<label xml:id="m-735">Accompagnamento o struttura armonica</label>
-													<instrDef xml:id="m-738" midi.channel="1" midi.pan="53" midi.volume="100"/>
-												</staffDef>
-											</staffGrp>
+								<scoreDef xml:id="m-727" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
+									<staffGrp xml:id="m-728">
+										<staffGrp xml:id="m-739" n="1" symbol="brace">
+											<staffDef xml:id="m-729" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="0" lines="5" n="1">
+												<label xml:id="m-730">Motivo annotato</label>
+												<instrDef xml:id="m-733" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
+											<staffDef xml:id="m-734" clef.line="4" clef.shape="F"  key.mode="major" keysig="0" lines="5" n="2">
+												<label xml:id="m-735">Accompagnamento o struttura armonica</label>
+												<instrDef xml:id="m-738" midi.channel="1" midi.pan="53" midi.volume="100"/>
+											</staffDef>
 										</staffGrp>
-									</scoreDef>
-								</supplied>
+									</staffGrp>
+								</scoreDef>
 								<section n="5" xml:id="m-740">
 									<relation type="editorial" rel="isSuccessorOf" plist="#studio4-3" target="#studio3-9"/>
 									<pb xml:id="m-744" n="5"/>
@@ -1589,6 +1611,10 @@
 									<del resp="#VB" type="strikethrough" hand="#VB_brownInk2">
 										<measure xml:id="m-742" label="37" n="38">
 											<staff xml:id="m-745" n="1">
+												<supplied resp="#CBM">
+													<clef line="2" shape="G"/>
+													<meterSig count="4" unit="4"/>
+												</supplied>
 												<layer xml:id="m-746" n="1">
 													<rest xml:id="m-747" dur="2" dur.ppq="512" tstamp.real="00:01:36.6"/>
 													<rest xml:id="m-748" dur="4" dur.ppq="256" tstamp.real="00:01:37.8"/>
@@ -1599,12 +1625,16 @@
 												</layer>
 											</staff>
 											<staff xml:id="m-752" n="2" visible="false">
+												<supplied resp="#CBM">
+													<clef line="4" shape="F"/>
+													<meterSig count="4" unit="4"/>
+												</supplied>
 												<layer xml:id="m-753" n="1">
 													<mRest xml:id="m-754" tstamp.real="00:01:36.6"/>
 												</layer>
 											</staff>
 											<tempo xml:id="m-755" layer="1" tstamp="1">
-												<rend xml:id="m-756" fontsize="4.8125vu">All[egr]o sostenuto assai</rend>
+												<rend xml:id="m-756" fontsize="4.8125vu">All<supplied resp="#CBM">egr</supplied>o sostenuto assai</rend>
 											</tempo>
 										</measure>
 										<measure xml:id="m-761" label="38" n="39">
@@ -1748,7 +1778,7 @@
 											</staff>
 										</measure>
 										<!-- variante alternativa -->
-										<section type="variante_alternativa" xml:id="variante_alternativa_1">
+										<section type="variante_alternativa" xml:id="variante_alternativa_1" target="variante_alternativa_2" targettype="alternative">
 											<measure xml:id="m-856" label="43" n="44">
 												<staff xml:id="m-857" n="1">
 													<layer xml:id="m-858" n="1">
@@ -1847,7 +1877,7 @@
 											</measure>
 										</section>
 										<!-- seconda variante alternativa -->
-										<section type="variante_alternativa" xml:id="variante_alternativa_2">
+										<section type="variante_alternativa" xml:id="variante_alternativa_2" target="variante_alternativa_1" targettype="alternative">
 											<measure xml:id="m-922" label="45" n="46">
 												<staff xml:id="m-924" n="1">
 													<layer xml:id="m-925" n="1">
@@ -2049,7 +2079,7 @@
 													</layer>
 												</staff>
 												<tempo xml:id="m-1058" layer="1" tstamp="1" vo="1.3125mm">
-													<rend xml:id="m-1059" fontsize="4.8125vu">più all[egr]o assai</rend>
+													<rend xml:id="m-1059" fontsize="4.8125vu">più all<supplied resp="#CBM">egr</supplied>o assai</rend>
 												</tempo>
 												<!-- <tempo xml:id="m-1060" ho="0.1641mm" layer="1" tstamp="1">
 													<rend xml:id="m-1061" fontsize="4.4375vu">[sic]</rend>
@@ -2161,7 +2191,7 @@
 													</layer>
 												</staff>
 												<tempo xml:id="m-1131" layer="1" tstamp="1">
-													<rend xml:id="m-1132" fontsize="4.4375vu">C[anto] in tempo</rend>
+													<rend xml:id="m-1132" fontsize="4.4375vu">C<supplied resp="#CBM">anto</supplied> in tempo</rend>
 												</tempo>
 												<dir xml:id="m-1134" startid="#m-1127">ecc.</dir>
 											</measure>
@@ -2307,7 +2337,7 @@
 													</layer>
 												</staff>
 												<tempo xml:id="m-1229" ho="0.4375mm" layer="1" tstamp="1">
-													<rend xml:id="m-1230" fontsize="4.4375vu">P[ri]mo tempo</rend>
+													<rend xml:id="m-1230" fontsize="4.4375vu">P<supplied resp="#CBM">ri</supplied>mo tempo</rend>
 												</tempo>
 												<tempo xml:id="m-1231" layer="1" tstamp="4.5">
 													<rend xml:id="m-1232" fontsize="4.4375vu">D.C.</rend>
