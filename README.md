@@ -1,6 +1,8 @@
 # StudiGiornalieri
 XML-MEI encoding of the so-called 'studi giornalieri' by Vincenzo Bellini (catalogued as MM.B.36, Museo Civico Belliniano in Catania, Italy).
+
 See the folder ‘Studi_giornalieri’ for the encoding of the single 'studi' in Bellini's autograph version held at the Museum.
+
 See the file ‘codifica_studiGiornalieri.xml’ for the encoding of the selected 'studi' in relation to the matching <em>Puritani</em> piece (as described in the master's thesis).
 
 ## Bibliography
