@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/5.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/5.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- <!DOCTYPE meiCorpus SYSTEM "mei-all.rng"> -->
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0">
+	<meiHead>
+		<fileDesc>
+			<titleStmt>
+				<title>'Studi giornalieri': 4,III - edizione digitale</title>
+				<composer>
+					<persName role="creator" corresp="#VB">Vincenzo Bellini</persName>
+				</composer>
+				<respStmt type="transcriber">
+					<resp>Trascrizioni a cura di</resp>
+					<persName corresp="#CBM">Candida Billie Mantica</persName>
+				</respStmt>
+				<respStmt type="encoder" xml:id="m-6">
+					<resp>Codifica a cura di</resp>
+					<persName xml:id="LM">Laura Mazzagufo</persName>
+				</respStmt>
+				<respStmt>
+					<resp xml:id="m-7">Relatori:</resp>
+					<persName xml:id="AMDG">Angelo Mario Del Grosso</persName>
+					<persName xml:id="CBM">Candida Billie Mantica</persName>
+				</respStmt>
+			</titleStmt>
+			<editionStmt>
+				<edition/>
+				<respStmt type="encoder">
+					<resp>Codifica a cura di</resp>
+					<persName corresp="#LM">Laura Mazzagufo</persName>
+				</respStmt>
+			</editionStmt>
+			<pubStmt>
+				<availability>
+					<useRestrict>Disponibile per scopi attinenti alla ricerca accademica o la didattica.</useRestrict>
+				</availability>
+			</pubStmt>
+			<seriesStmt>
+				<title xml:id="m-1">Gli 'studi giornalieri' di Vincenzo Bellini: una proposta di codifica.</title>
+				<title type="subtitle" xml:id="m-2">Rappresentazione dei dati nel contesto biografico, epistolare e genetico-analitico del gruppo di studi correlati al n.9 «Nel mirarti un solo istante» dei 'Puritani'.</title>
+				<contents xml:id="m-5">
+					<p>Edizione redatta in occasione dell'elaborato di tesi di Laurea Magistrale in Informatica Umanistica (UniPi), <date>Febbraio 2023. Qui sono codificati quattro studi della pagina III e uno studio della pagina IV del manoscritto MM.B.36 del Museo Belliniano di Catania, 'studi giornalieri' ritenuti di particolare importanza nell'analisi del processo creativo del compositore o significativamente esemplari per illustrare alcuni dei fenomeni più ricorrenti nel testo musicale.</date></p>
+				</contents>
+			</seriesStmt>
+			<sourceDesc>
+				<source n="1">
+					<bibl corresp="#ms-studi_giornalieri">
+						<title resp="#LM">Autografo degli 'Studi giornalieri'</title>
+						<physLoc>
+							<repository n="I-CATm" corresp="http://www.rism.info/typo3conf/ext/user_apachesolr/result.php?q=id:30003436" role="museum">
+								Museo Belliniano di <settlement>Catania</settlement> (<country>Italy</country>)
+							</repository>
+							<identifier type="folder_siglum">MM-7.164-6.1</identifier>
+							<identifier type="shelfmark">MM.B.36</identifier>
+						</physLoc>
+						<locus>f. 3</locus>
+					</bibl>
+				</source>
+				<source n="2" xml:id="Mantica2020" >
+					<biblStruct xml:id="m-17" target="http://www.bollettinostudibelliniani.eu/wp-content/uploads/2021/04/04-Mantica.pdf">
+						<analytic>
+							<author corresp="#CBM">
+								<persName>
+									<foreName>Candida Billie</foreName>
+									<name>Mantica</name>
+								</persName>
+							</author>
+							<title level="a">Gli 'studi giornalieri' di Bellini «sviluppati con effetto» nei Puritani</title>
+							<identifier type="DOI">10.17422/ISSN.2283-8716/104</identifier>
+						</analytic>
+						<monogr>
+							<title level="j">Bollettino di Studi Belliniani</title>
+							<imprint>
+								<pubPlace>Catania</pubPlace>
+								<publisher>Fondazione Bellini - Centro Studi Belliniani</publisher>
+								<date calendar="2020">2020</date>
+							</imprint>
+							<biblScope unit="volume">6</biblScope>
+							<biblScope unit="page" from="29" to="73">29-73</biblScope>
+						</monogr>
+					</biblStruct>
+				</source>
+			</sourceDesc>
+		</fileDesc>
+		<manifestationList><!-- information about the source(s) regardless of the encoding process -->
+			<manifestation corresp="#ms-studi_giornalieri">
+				<physDesc>
+					<condition>
+						<p>Il manoscritto è in un buon stato di conservazione. Strappi, tracce di muffa e altri segni del tempo si registrano solo sui bordi delle pagine.</p>
+					</condition>
+					<extent unit="page" quantity="20">10 fogli numerati in 20 pagine</extent>
+					<dimensions unit="mm">
+						<height>250</height>
+						<width>350</width>
+					</dimensions>
+					<stamp>
+						<locus>Sul margine destro o sinistro di ciascun foglio</locus> è presente un timbro del
+						<corpName corresp="#museo_belliniano">Museo Belliniano di Catania</corpName>
+					</stamp>
+					<physMedium>
+						<p>Il manoscritto è in carta color sabbia, con inchiostro color marrone chiaro o marrone scuro.</p>
+					</physMedium>
+					<scoreFormat auth="MARC21" auth.uri="https://www.loc.gov/marc/bibliographic/bd008m.html" codedval="20-b">Miniature or study score</scoreFormat>
+					<handList>
+						<hand xml:id="VB_brownInk1" medium="brown_ink" resp="#VB" initial="true"/>
+						<hand xml:id="VB_brownInk2" medium="brown_ink" resp="#VB"/>
+						<hand xml:id="cataloguer_stamp" medium="stamp" resp="#unknown"/>
+						<hand xml:id="cataloguer_brownInk" medium="brown_ink" resp="#unknown"/>
+					</handList>
+				</physDesc>
+				<creation>
+					Una descrizione delle circostanze della genesi degli 'studi giornalieri' è fornita in <ref target="#Mantica2020">Mantica2020</ref> e in <ref target="#DellaSeta2013">DellaSeta2013</ref>.
+				</creation>
+			</manifestation>
+		</manifestationList>
+	</meiHead>
+
+	<music meiversion="5.0">
+		<!-- GENETIC STAGES DESCRIPTION -->
+		<genDesc ordered="true">
+			<!-- 'Studi Giornalieri': studio 3, I -->
+			<genState xml:id="s_1a" label="Studi Giornalieri: 3, I" precedes="#s_1b">
+				<desc>
+					Studio in Si bemolle maggiore, in tempo 4/4.
+					Caratterizzato dall'apertura su un intervallo ascendente di seconda maggiore, in levare.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 3, VII -->
+			<genState xml:id="s_1b" label="Studi Giornalieri: 3, VII" precedes="#s_1c" follows="#s_1a">
+				<desc>
+					Studio in Re maggiore, in tempo 4/4.
+					Caratterizzato dall'apertura su un intervallo discendente di seconda maggiore, su un ritmo puntato.
+					Lo studio è corredato di un testo verbale.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 3, VIII -->
+			<genState xml:id="s_1c" label="Studi Giornalieri: 3, VIII" precedes="#s_1d" follows="#s_1b">
+				<desc>
+					Studio in Si bemolle maggiore, tempo 4/4.
+					Caratterizzato da un intervallo ascendente di seconda minore, in levare, su ritmo puntato, a cui segue un intervallo di seconda maggiore.
+					Presenta una configurazione formale più precisa (una semifrase di quattro battute sospesa sulla dominante, seguita da una semifrase di quattro battute, conclusa sulla tonica).
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 3, IX -->
+			<genState xml:id="s_1d" label="Studi Giornalieri: 3, VII" precedes="#s_1e" follows="#s_1c">
+				<desc>
+					Studio in Si bemolle maggiore, tempo 4/4.
+					Caratterizzato dalla stessa figurazione iniziale di 3, VIII, con semifrasi accorciate a due battute.
+					Lo studio è stato cassato interamente.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 4, III -->
+			<genState xml:id="s_1e" label="Studi Giornalieri: 4, III" precedes="#s_2" follows="#s_1d">
+				<desc>
+					Studio in Do maggiore, in tempo 4/4.
+					Lo studio è un abbozzo di sezione di 22 battute che rielabora il profilo melodico di 3, IX.
+					Presenta cancellature e una variante alternativa.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+		</genDesc>
+
+		<front>
+			<div type="sigle_belliniane"><!-- sigle di Bellini -->
+				<p n="1" xml:id="sigla4">
+					<choice>
+						<abbr source="#Mantica2020" type="contraction" hand="#VB_brownInk2">C:to ed ag.</abbr>
+						<expan source="#Mantica2020" resp="#CBM" cert="low">Cantato ed agito</expan>
+					</choice>
+				</p>
+			</div>
+			<div type="paratesto">
+				<p>
+					<stamp type="catalogue">
+						<locus n="4">4</locus>
+						<corpName corresp="#museo_belliniano">Museo Belliniano Catania</corpName>
+					</stamp>
+				</p>
+			</div>
+		</front>
+		<body>
+			<mdiv xml:id="studio_4-III" type="section_sketch" corresp="#s_1e">
+				<score xml:id="m-726">
+					<scoreDef xml:id="m-727" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
+						<staffGrp xml:id="m-728">
+							<staffGrp xml:id="m-739" n="1" symbol="brace">
+								<staffDef xml:id="m-729" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="0" lines="5" n="1">
+									<label xml:id="m-730">Motivo annotato</label>
+									<instrDef xml:id="m-733" midi.channel="1" midi.pan="53" midi.volume="100"/>
+								</staffDef>
+								<staffDef xml:id="m-734" clef.line="4" clef.shape="F"  key.mode="major" keysig="0" lines="5" n="2">
+									<label xml:id="m-735">Accompagnamento o struttura armonica</label>
+									<instrDef xml:id="m-738" midi.channel="1" midi.pan="53" midi.volume="100"/>
+								</staffDef>
+							</staffGrp>
+						</staffGrp>
+					</scoreDef>
+					<section n="5" xml:id="m-740">
+						<relation type="editorial" rel="isSuccessorOf" plist="#studio4-3" target="#studio3-9"/>
+						<pb xml:id="m-744" n="5"/>
+						<sb xml:id="m-743"/>
+						<scoreDef xml:id="m-760" keysig="0"/>
+						<del resp="#VB" type="strikethrough" hand="#VB_brownInk2">
+							<measure xml:id="m-742" label="37" n="38">
+								<staff xml:id="m-745" n="1">
+									<supplied resp="#CBM">
+										<clef line="2" shape="G"/>
+										<meterSig count="4" unit="4"/>
+									</supplied>
+									<layer xml:id="m-746" n="1">
+										<rest xml:id="m-747" dur="2" dur.ppq="512" tstamp.real="00:01:36.6"/>
+										<rest xml:id="m-748" dur="4" dur.ppq="256" tstamp.real="00:01:37.8"/>
+										<beam xml:id="m-750">
+											<note xml:id="m-749" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:38.4" vel="0"/>
+											<note xml:id="m-751" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:01:38.85" vel="0"/>
+										</beam>
+									</layer>
+								</staff>
+								<staff xml:id="m-752" n="2" visible="false">
+									<supplied resp="#CBM">
+										<clef line="4" shape="F"/>
+										<meterSig count="4" unit="4"/>
+									</supplied>
+									<layer xml:id="m-753" n="1">
+										<mRest xml:id="m-754" tstamp.real="00:01:36.6"/>
+									</layer>
+								</staff>
+								<tempo xml:id="m-755" layer="1" tstamp="1">
+									<rend xml:id="m-756" fontsize="4.8125vu">All<supplied resp="#CBM">egr</supplied>o sostenuto assai</rend>
+								</tempo>
+							</measure>
+							<measure xml:id="m-761" label="38" n="39">
+								<staff xml:id="m-762" n="1">
+									<layer xml:id="m-763" n="1">
+										<note xml:id="m-764" dur="4" dur.ppq="256" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:01:39" vel="0"/>
+										<note xml:id="m-765" dots="1" dur="4" dur.ppq="384" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:01:39.6" vel="0"/>
+										<beam xml:id="m-767">
+											<note xml:id="m-766" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:01:40.5" vel="0"/>
+											<note xml:id="m-768" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:40.8" vel="0"/>
+											<note xml:id="m-769" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:01:41.1" vel="0"/>
+										</beam>
+									</layer>
+								</staff>
+								<staff xml:id="m-770" n="2" visible="false">
+									<layer xml:id="m-771" n="1">
+										<mRest xml:id="m-772" tstamp.real="00:01:39"/>
+									</layer>
+								</staff>
+							</measure>
+							<measure xml:id="m-773" label="39" n="40">
+								<staff xml:id="m-774" n="1">
+									<layer xml:id="m-775" n="1">
+										<note xml:id="m-776" dur="4" dur.ppq="256" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:41.4" vel="0"/>
+										<note xml:id="m-777" dur="4" dur.ppq="256" oct="5" pname="c" pnum="72" stem.dir="down" tstamp.real="00:01:42" vel="0"/>
+										<rest xml:id="m-778" dur="8" dur.ppq="128" tstamp.real="00:01:42.6"/>
+										<beam xml:id="m-782">
+											<chord xml:id="m-779" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:42.9">
+												<note xml:id="m-780" dur="8" dur.ppq="128" oct="5" pname="c" pnum="72" vel="0"/>
+												<note xml:id="m-781" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" vel="0"/>
+											</chord>
+											<chord xml:id="m-783" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:43.2">
+												<note xml:id="m-784" dur="8" dur.ppq="128" oct="4" pname="b" pnum="71" vel="0"/>
+												<note xml:id="m-785" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" vel="0"/>
+											</chord>
+											<chord xml:id="m-786" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:43.5">
+												<note xml:id="m-787" dur="8" dur.ppq="128" oct="4" pname="a" pnum="69" vel="0"/>
+												<note xml:id="m-788" dur="8" dur.ppq="128" oct="5" pname="c" pnum="72" vel="0"/>
+											</chord>
+										</beam>
+									</layer>
+								</staff>
+								<staff xml:id="m-789" n="2" visible="false">
+									<layer xml:id="m-790" n="1">
+										<mRest xml:id="m-791" tstamp.real="00:01:41.4"/>
+									</layer>
+								</staff>
+							</measure>
+							<measure xml:id="m-792" label="40" n="41">
+								<staff xml:id="m-793" n="1">
+									<layer xml:id="m-794" n="1">
+										<beam xml:id="m-798">
+											<chord xml:id="m-795" dots="1" dur="8" dur.ppq="192" stem.dir="down" tstamp.real="00:01:43.8">
+												<note xml:id="m-796" dots="1" dur="8" dur.ppq="192" oct="4" pname="g" pnum="67" vel="0"/>
+												<note xml:id="m-797" dots="1" dur="8" dur.ppq="192" oct="4" pname="b" pnum="71" vel="0"/>
+											</chord>
+											<chord xml:id="m-799" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:01:44.25">
+												<note xml:id="m-800" dur="16" dur.ppq="64" oct="4" pname="a" pnum="69" vel="0"/>
+												<note xml:id="m-801" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" vel="0"/>
+											</chord>
+											<chord xml:id="m-802" dots="1" dur="8" dur.ppq="192" stem.dir="down" tstamp.real="00:01:44.4">
+												<note xml:id="m-803" dots="1" dur="8" dur.ppq="192" oct="4" pname="b" pnum="71" vel="0"/>
+												<note xml:id="m-804" dots="1" dur="8" dur.ppq="192" oct="5" pname="d" pnum="74" vel="0"/>
+											</chord>
+											<chord xml:id="m-805" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:01:44.85">
+												<note xml:id="m-806" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" vel="0"/>
+												<note xml:id="m-807" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" vel="0"/>
+											</chord>
+										</beam>
+										<beam xml:id="m-811">
+											<chord xml:id="m-808" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:45">
+												<note xml:id="m-809" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" vel="0"/>
+												<note xml:id="m-810" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" vel="0"/>
+											</chord>
+											<chord xml:id="m-812" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:45.3">
+												<note xml:id="m-813" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" vel="0"/>
+												<note xml:id="m-814" dur="8" dur.ppq="128" oct="5" pname="g" pnum="79" vel="0"/>
+											</chord>
+											<chord xml:id="m-815" dots="1" dur="8" dur.ppq="192" stem.dir="down" tstamp.real="00:01:45.6">
+												<note xml:id="m-816" dots="1" dur="8" dur.ppq="192" oct="5" pname="f" pnum="77" vel="0"/>
+												<note xml:id="m-817" dots="1" dur="8" dur.ppq="192" oct="5" pname="a" pnum="81" vel="0"/>
+											</chord>
+											<chord xml:id="m-818" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:01:46.05">
+												<note xml:id="m-819" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" vel="0"/>
+												<note xml:id="m-820" dur="16" dur.ppq="64" oct="5" pname="a" pnum="81" vel="0"/>
+											</chord>
+										</beam>
+									</layer>
+								</staff>
+								<staff xml:id="m-821" n="2" visible="false">
+									<layer xml:id="m-822" n="1">
+										<mRest xml:id="m-823" tstamp.real="00:01:43.8"/>
+									</layer>
+								</staff>
+							</measure>
+							<measure xml:id="m-824" label="41" n="42" right="single">
+								<staff xml:id="m-825" n="1">
+									<layer xml:id="m-826" n="1">
+										<chord xml:id="m-827" dur="4" dur.ppq="256" stem.dir="down" tstamp.real="00:01:46.2">
+											<note xml:id="m-828" dur="4" dur.ppq="256" oct="5" pname="d" pnum="75" vel="0">
+												<accid xml:id="m-829" accid="s"/>
+											</note>
+											<note xml:id="m-830" dur="4" dur.ppq="256" oct="5" pname="f" pnum="77" vel="0"/>
+										</chord>
+										<chord xml:id="m-831" dur="4" dur.ppq="256" stem.dir="down" tstamp.real="00:01:46.8">
+											<note xml:id="m-832" dur="4" dur.ppq="256" oct="5" pname="e" pnum="76" vel="0"/>
+											<note xml:id="m-833" dur="4" dur.ppq="256" oct="5" pname="g" pnum="79" vel="0"/>
+										</chord>
+										<rest xml:id="m-834" dur="4" dur.ppq="256" tstamp.real="00:01:47.4"/>
+										<beam xml:id="m-836">
+											<note xml:id="m-835" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="up" tstamp.real="00:01:48" vel="0"/>
+											<note xml:id="m-837" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:01:48.45" vel="0"/>
+										</beam>
+									</layer>
+								</staff>
+								<staff xml:id="m-840" n="2" visible="false">
+									<layer xml:id="m-841" n="1">
+										<mRest xml:id="m-842" tstamp.real="00:01:46.2"/>
+									</layer>
+								</staff>
+								<dir xml:id="m-838" label="technique" layer="1" staff="1" startid="#m-837" tstamp="4.3086" vo="2.3516mm">[<rend xml:id="m-839" fontfam="Helsinki Text Std">§</rend>]</dir>
+							</measure>
+							<!-- interruzione di sistema sul manoscritto -->
+							<sb xml:id="m-844"/>
+							<measure xml:id="m-843" label="42" n="43">
+								<staff xml:id="m-845" n="1">
+									<layer xml:id="m-846" n="1">
+										<note xml:id="m-847" dur="4" dur.ppq="256" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:01:48.6" vel="0"/>
+										<note xml:id="m-848" dots="1" dur="4" dur.ppq="384" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:01:49.2" vel="0"/>
+										<beam xml:id="m-850">
+											<note xml:id="m-849" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:01:50.1" vel="0"/>
+											<note xml:id="m-851" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:50.4" vel="0"/>
+											<note xml:id="m-852" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:01:50.7" vel="0"/>
+										</beam>
+									</layer>
+								</staff>
+								<staff xml:id="m-853" n="2" visible="false">
+									<layer xml:id="m-854" n="1">
+										<mRest xml:id="m-855" tstamp.real="00:01:48.6"/>
+									</layer>
+								</staff>
+							</measure>
+							<!-- variante alternativa -->
+							<section type="variante_alternativa" xml:id="variante_alternativa_1" target="variante_alternativa_2" targettype="alternative">
+								<measure xml:id="m-856" label="43" n="44">
+									<staff xml:id="m-857" n="1">
+										<layer xml:id="m-858" n="1">
+											<beam xml:id="m-861">
+												<note xml:id="m-859" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:51" vel="0"/>
+												<note xml:id="m-862" dur="32" dur.ppq="32" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:51.3" vel="0"/>
+												<note xml:id="m-863" dur="32" dur.ppq="32" oct="5" pname="c" pnum="72" stem.dir="down" tstamp.real="00:01:51.375" vel="0"/>
+												<note xml:id="m-864" dur="32" dur.ppq="32" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:51.45" vel="0"/>
+												<note xml:id="m-865" dur="32" dur.ppq="32" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:01:51.525" vel="0"/>
+											</beam>
+											<chord xml:id="m-866" dur="2" dur.ppq="512" stem.dir="down" tstamp.real="00:01:51.6">
+												<note xml:id="m-867" dur="2" dur.ppq="512" oct="6" pname="c" pnum="84" vel="0"/>
+												<note xml:id="m-868" dur="2" dur.ppq="512" oct="6" pname="e" pnum="88" vel="0"/>
+											</chord>
+											<beam xml:id="m-872">
+												<chord xml:id="m-869" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:52.8">
+													<note xml:id="m-870" dur="8" dur.ppq="128" oct="5" pname="b" pnum="83" vel="0"/>
+													<note xml:id="m-871" dur="8" dur.ppq="128" oct="6" pname="d" pnum="86" vel="0"/>
+												</chord>
+												<chord xml:id="m-873" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:53.1">
+													<note xml:id="m-874" dur="8" dur.ppq="128" oct="5" pname="a" pnum="81" vel="0"/>
+													<note xml:id="m-875" dur="8" dur.ppq="128" oct="6" pname="c" pnum="84" vel="0"/>
+												</chord>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-876" n="2" visible="false">
+										<layer xml:id="m-877" n="1">
+											<mRest xml:id="m-878" tstamp.real="00:01:51"/>
+										</layer>
+									</staff>
+									<tie xml:id="m-860" endid="#m-862" startid="#m-859"/>
+								</measure>
+								<measure xml:id="m-879" label="44" n="45" right="dbl">
+									<staff xml:id="m-880" n="1">
+										<layer xml:id="m-881" n="1">
+											<beam xml:id="m-886">
+												<chord xml:id="m-882" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:53.4">
+													<note xml:id="m-883" dur="8" dur.ppq="128" oct="5" pname="g" pnum="80" vel="0">
+														<accid xml:id="m-884" accid="s"/>
+													</note>
+													<note xml:id="m-885" dur="8" dur.ppq="128" oct="5" pname="b" pnum="83" vel="0"/>
+												</chord>
+												<chord xml:id="m-887" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:53.7">
+													<note xml:id="m-888" dur="8" dur.ppq="128" oct="5" pname="a" pnum="81" vel="0"/>
+													<note xml:id="m-889" dur="8" dur.ppq="128" oct="6" pname="c" pnum="84" vel="0"/>
+												</chord>
+												<chord xml:id="m-890" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:54">
+													<note xml:id="m-891" dur="8" dur.ppq="128" oct="5" pname="g" pnum="79" vel="0">
+														<accid xml:id="m-892" accid="n"/>
+													</note>
+													<note xml:id="m-893" dur="8" dur.ppq="128" oct="5" pname="b" pnum="83" vel="0"/>
+												</chord>
+												<chord xml:id="m-894" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:54.3">
+													<note xml:id="m-895" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" vel="0"/>
+													<note xml:id="m-896" dur="8" dur.ppq="128" oct="5" pname="a" pnum="81" vel="0"/>
+												</chord>
+											</beam>
+											<beam xml:id="m-900">
+												<chord xml:id="m-897" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:54.6">
+													<note xml:id="m-898" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" vel="0"/>
+													<note xml:id="m-899" dur="8" dur.ppq="128" oct="5" pname="a" pnum="81" vel="0"/>
+												</chord>
+												<chord xml:id="m-901" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:54.9">
+													<note xml:id="m-902" dur="8" dur.ppq="128" oct="5" pname="g" pnum="79" vel="0"/>
+													<note xml:id="m-904" dur="8" dur.ppq="128" oct="5" pname="b" pnum="83" vel="0"/>
+												</chord>
+											</beam>
+											<beam xml:id="m-909">
+												<chord xml:id="m-906" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:01:55.2">
+													<note xml:id="m-907" dur="16" dur.ppq="64" oct="5" pname="g" pnum="79" vel="0"/>
+													<note xml:id="m-908" dur="16" dur.ppq="64" oct="5" pname="b" pnum="83" vel="0"/>
+												</chord>
+												<chord xml:id="m-910" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:01:55.35">
+													<note xml:id="m-911" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" vel="0"/>
+													<note xml:id="m-912" dur="16" dur.ppq="64" oct="5" pname="a" pnum="81" vel="0"/>
+												</chord>
+												<chord xml:id="m-913" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:01:55.5">
+													<note xml:id="m-914" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" vel="0"/>
+													<note xml:id="m-915" dur="16" dur.ppq="64" oct="5" pname="g" pnum="79" vel="0"/>
+												</chord>
+												<chord xml:id="m-916" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:01:55.65">
+													<note xml:id="m-917" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" vel="0"/>
+													<note xml:id="m-918" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" vel="0"/>
+												</chord>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-919" n="2" visible="false">
+										<layer xml:id="m-920" n="1">
+											<mRest xml:id="m-921" tstamp.real="00:01:53.4"/>
+										</layer>
+									</staff>
+									<tie xml:id="m-903" endid="#m-907" startid="#m-902"/>
+									<tie xml:id="m-905" endid="#m-908" startid="#m-904"/>
+								</measure>
+							</section>
+							<!-- seconda variante alternativa -->
+							<section type="variante_alternativa" xml:id="variante_alternativa_2" target="variante_alternativa_1" targettype="alternative">
+								<measure xml:id="m-922" label="45" n="46">
+									<staff xml:id="m-924" n="1">
+										<layer xml:id="m-925" n="1">
+											<beam xml:id="m-928">
+												<note xml:id="m-926" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:55.8" vel="0"/>
+												<note xml:id="m-929" dur="32" dur.ppq="32" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:56.1" vel="0"/>
+												<note xml:id="m-930" dur="32" dur.ppq="32" oct="5" pname="c" pnum="72" stem.dir="down" tstamp.real="00:01:56.175" vel="0"/>
+												<note xml:id="m-931" dur="32" dur.ppq="32" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:01:56.25" vel="0"/>
+												<note xml:id="m-932" dur="32" dur.ppq="32" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:01:56.325" vel="0"/>
+											</beam>
+											<chord xml:id="m-933" dur="2" dur.ppq="512" stem.dir="down" tstamp.real="00:01:56.4">
+												<note xml:id="m-934" dur="2" dur.ppq="512" oct="6" pname="c" pnum="84" vel="0"/>
+												<note xml:id="m-935" dur="2" dur.ppq="512" oct="6" pname="e" pnum="88" vel="0"/>
+											</chord>
+											<beam xml:id="m-939">
+												<chord xml:id="m-936" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:57.6">
+													<note xml:id="m-937" dur="8" dur.ppq="128" oct="5" pname="b" pnum="83" vel="0"/>
+													<note xml:id="m-938" dur="8" dur.ppq="128" oct="6" pname="d" pnum="86" vel="0"/>
+												</chord>
+												<chord xml:id="m-940" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:57.9">
+													<note xml:id="m-941" dur="8" dur.ppq="128" oct="5" pname="a" pnum="81" vel="0"/>
+													<note xml:id="m-942" dur="8" dur.ppq="128" oct="6" pname="c" pnum="84" vel="0"/>
+												</chord>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-945" n="2" visible="false">
+										<layer xml:id="m-946" n="1">
+											<mRest xml:id="m-947" tstamp.real="00:01:55.8"/>
+										</layer>
+									</staff>
+									<tie xml:id="m-927" endid="#m-929" startid="#m-926"/>
+									<dir xml:id="m-944" startid="#m-926">oppure</dir>
+								</measure>
+								<measure xml:id="m-948" label="46" n="47">
+									<staff xml:id="m-949" n="1">
+										<layer xml:id="m-950" n="1">
+											<beam xml:id="m-954">
+												<chord xml:id="m-951" dur="32" dur.ppq="32" stem.dir="down" tstamp.real="00:01:58.2">
+													<note xml:id="m-952" dur="32" dur.ppq="32" oct="5" pname="a" pnum="81" vel="0"/>
+													<note xml:id="m-953" dur="32" dur.ppq="32" oct="6" pname="c" pnum="84" vel="0"/>
+												</chord>
+												<chord xml:id="m-955" dur="32" dur.ppq="32" stem.dir="down" tstamp.real="00:01:58.275">
+													<note xml:id="m-956" dur="32" dur.ppq="32" oct="5" pname="g" pnum="79" vel="0"/>
+													<note xml:id="m-957" dur="32" dur.ppq="32" oct="5" pname="b" pnum="83" vel="0"/>
+												</chord>
+												<chord xml:id="m-958" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:58.35">
+													<note xml:id="m-959" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" vel="0"/>
+													<note xml:id="m-960" dur="8" dur.ppq="128" oct="5" pname="a" pnum="81" vel="0"/>
+												</chord>
+											</beam>
+											<rest xml:id="m-961" dur="16" dur.ppq="64" tstamp.real="00:01:58.65"/>
+											<beam xml:id="m-965">
+												<chord xml:id="m-962" dur="32" dur.ppq="32" stem.dir="down" tstamp.real="00:01:58.8">
+													<note xml:id="m-963" dur="32" dur.ppq="32" oct="5" pname="f" pnum="77" vel="0"/>
+													<note xml:id="m-964" dur="32" dur.ppq="32" oct="5" pname="a" pnum="81" vel="0"/>
+												</chord>
+												<chord xml:id="m-966" dur="32" dur.ppq="32" stem.dir="down" tstamp.real="00:01:58.875">
+													<note xml:id="m-967" dur="32" dur.ppq="32" oct="5" pname="e" pnum="76" vel="0"/>
+													<note xml:id="m-968" dur="32" dur.ppq="32" oct="5" pname="g" pnum="79" vel="0"/>
+												</chord>
+												<chord xml:id="m-969" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:58.95">
+													<note xml:id="m-970" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" vel="0"/>
+													<note xml:id="m-971" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" vel="0"/>
+												</chord>
+											</beam>
+											<rest xml:id="m-972" dur="16" dur.ppq="64" tstamp.real="00:01:59.25"/>
+											<tuplet xml:id="m-977" bracket.visible="false" dur.ppq="256" endid="#m-981" num="3" num.visible="false" numbase="2" startid="#m-973">
+												<beam xml:id="m-976">
+													<chord xml:id="m-973" artic="stacc" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:59.4">
+														<note xml:id="m-974" dur="8" dur.ppq="85" oct="4" pname="g" pnum="67" vel="0"/>
+														<note xml:id="m-975" dur="8" dur.ppq="85" oct="4" pname="b" pnum="71" vel="0"/>
+													</chord>
+													<chord xml:id="m-978" artic="stacc" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:59.599">
+														<note xml:id="m-979" dur="8" dur.ppq="85" oct="4" pname="b" pnum="71" vel="0"/>
+														<note xml:id="m-980" dur="8" dur.ppq="85" oct="5" pname="d" pnum="74" vel="0"/>
+													</chord>
+													<chord xml:id="m-981" artic="stacc" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:01:59.798">
+														<note xml:id="m-982" dur="8" dur.ppq="85" oct="5" pname="d" pnum="74" vel="0"/>
+														<note xml:id="m-983" dur="8" dur.ppq="85" oct="5" pname="f" pnum="77" vel="0"/>
+													</chord>
+												</beam>
+											</tuplet>
+											<tuplet xml:id="m-989" bracket.visible="false" dur.ppq="256" endid="#m-993" num="3" num.visible="false" numbase="2" startid="#m-984">
+												<beam xml:id="m-988">
+													<chord xml:id="m-984" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:02:00">
+														<note xml:id="m-985" dur="8" dur.ppq="85" oct="5" pname="f" pnum="77" vel="0"/>
+														<note xml:id="m-986" dur="8" dur.ppq="85" oct="5" pname="a" pnum="81" vel="0"/>
+													</chord>
+													<chord xml:id="m-990" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:02:00.199">
+														<note xml:id="m-991" dur="8" dur.ppq="85" oct="5" pname="e" pnum="76" vel="0"/>
+														<note xml:id="m-992" dur="8" dur.ppq="85" oct="5" pname="g" pnum="79" vel="0"/>
+													</chord>
+													<chord xml:id="m-993" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:02:00.398">
+														<note xml:id="m-994" dur="8" dur.ppq="85" oct="5" pname="d" pnum="74" vel="0"/>
+														<note xml:id="m-995" dur="8" dur.ppq="85" oct="5" pname="f" pnum="77" vel="0"/>
+													</chord>
+												</beam>
+											</tuplet>
+										</layer>
+									</staff>
+									<staff xml:id="m-998" n="2" visible="false">
+										<layer xml:id="m-999" n="1">
+											<mRest xml:id="m-1000" tstamp.real="00:01:58.2"/>
+										</layer>
+									</staff>
+									<fermata xml:id="m-987" form="norm" layer="1" shape="curved" staff="1" tstamp="4"/>
+									<dir xml:id="m-997" startid="#m-990" endid="#m-993">lente</dir>
+									<slur xml:id="m-953a" endid="#m-960" startid="#m-953"/>
+									<slur xml:id="m-964a" endid="#m-971" startid="#m-964"/>
+								</measure>
+							</section>
+							<!-- fine variante alternativa -->
+							<measure xml:id="m-1001" label="47" n="48" right="dbl">
+								<staff xml:id="m-1002" n="1">
+									<layer xml:id="m-1003" n="1">
+										<chord xml:id="m-1004" dur="4" dur.ppq="256" stem.dir="down" tstamp.real="00:02:00.698">
+											<note xml:id="m-1005" dur="4" dur.ppq="256" oct="5" pname="c" pnum="72" vel="0"/>
+											<note xml:id="m-1006" dur="4" dur.ppq="256" oct="5" pname="e" pnum="76" vel="0"/>
+										</chord>
+										<rest xml:id="m-1007" dur="4" dur.ppq="256" tstamp.real="00:02:01.298"/>
+										<beam xml:id="m-1011">
+											<chord xml:id="m-1008" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:02:01.898">
+												<note xml:id="m-1009" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" vel="0"/>
+												<note xml:id="m-1010" dur="8" dur.ppq="128" oct="5" pname="g" pnum="79" vel="0"/>
+											</chord>
+											<chord xml:id="m-1012" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:02.198">
+												<note xml:id="m-1013" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" vel="0"/>
+												<note xml:id="m-1014" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" vel="0"/>
+											</chord>
+											<chord xml:id="m-1015" breaksec="1" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:02.348">
+												<note xml:id="m-1016" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" vel="0"/>
+												<note xml:id="m-1017" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" vel="0"/>
+											</chord>
+											<chord xml:id="m-1018" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:02.498">
+												<note xml:id="m-1019" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" vel="0"/>
+												<note xml:id="m-1020" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" vel="0"/>
+											</chord>
+											<chord xml:id="m-1021" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:02.648">
+												<note xml:id="m-1022" dur="16" dur.ppq="64" oct="4" pname="b" pnum="71" vel="0"/>
+												<note xml:id="m-1023" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" vel="0"/>
+											</chord>
+											<chord xml:id="m-1024" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:02.798">
+												<note xml:id="m-1025" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" vel="0"/>
+												<note xml:id="m-1026" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" vel="0"/>
+											</chord>
+											<chord xml:id="m-1027" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:02.948">
+												<note xml:id="m-1028" dur="16" dur.ppq="64" oct="4" pname="f" pnum="65" vel="0"/>
+												<note xml:id="m-1029" dur="16" dur.ppq="64" oct="4" pname="a" pnum="69" vel="0"/>
+											</chord>
+										</beam>
+									</layer>
+								</staff>
+								<staff xml:id="m-1030" n="2" visible="false">
+									<layer xml:id="m-1031" n="1">
+										<mRest xml:id="m-1032" tstamp.real="00:02:00.698"/>
+									</layer>
+								</staff>
+								<slur xml:id="m-1009a" endid="#m-1013" startid="#m-1009"/>
+							</measure>
+						</del>
+						<!-- variante sostitutiva -->
+						<subst resp="#CBM" cert="medium" xml:id="variante_sostitutiva">
+							<del resp="#VB" type="strikethrough" hand="#VB_brownInk2">
+								<measure xml:id="m-1033" label="48" n="49">
+									<staff xml:id="m-1035" n="1">
+										<layer xml:id="m-1036" n="1">
+											<sic>
+												<chord xml:id="m-1037" dur="4" dur.ppq="256" stem.dir="down" tstamp.real="00:02:03.098">
+													<note xml:id="m-1038" dur="4" dur.ppq="256" oct="4" pname="a" pnum="69" vel="0"/>
+													<note xml:id="m-1039" dur="4" dur.ppq="256" oct="5" pname="c" pnum="72" vel="0"/>
+												</chord>
+												<chord xml:id="m-1040" dur="8" dur.ppq="128" stem.dir="up" tstamp.real="00:02:03.698">
+													<note xml:id="m-1041" dur="8" dur.ppq="128" oct="4" pname="g" pnum="68" vel="0">
+														<accid xml:id="m-1042" accid="s"/>
+													</note>
+													<note xml:id="m-1043" dur="8" dur.ppq="128" oct="4" pname="b" pnum="71" vel="0"/>
+												</chord>
+												<rest xml:id="m-1044" dur="16" dur.ppq="64" tstamp.real="00:02:03.998"/>
+												<chord xml:id="m-1045" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:04.148">
+													<note xml:id="m-1046" dur="16" dur.ppq="64" oct="4" pname="b" pnum="71" vel="0"/>
+													<note xml:id="m-1047" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" vel="0"/>
+												</chord>
+												<chord xml:id="m-1048" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:02:04.298">
+													<note xml:id="m-1049" dur="8" dur.ppq="128" oct="4" pname="a" pnum="69" vel="0"/>
+													<note xml:id="m-1050" dur="8" dur.ppq="128" oct="5" pname="c" pnum="72" vel="0"/>
+												</chord>
+												<rest xml:id="m-1051" dur="16" dur.ppq="64" tstamp.real="00:02:04.598"/>
+												<chord xml:id="m-1052" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:04.748">
+													<note xml:id="m-1053" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" vel="0"/>
+													<note xml:id="m-1054" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" vel="0"/>
+												</chord>
+											</sic>
+										</layer>
+									</staff>
+									<staff xml:id="m-1055" n="2" visible="false">
+										<layer xml:id="m-1056" n="1">
+											<mRest xml:id="m-1057" tstamp.real="00:02:03.098"/>
+										</layer>
+									</staff>
+									<tempo xml:id="m-1058" layer="1" tstamp="1" vo="1.3125mm">
+										<rend xml:id="m-1059" fontsize="4.8125vu">più all<supplied resp="#CBM">egr</supplied>o assai</rend>
+									</tempo>
+									<!-- <tempo xml:id="m-1060" ho="0.1641mm" layer="1" tstamp="1">
+										<rend xml:id="m-1061" fontsize="4.4375vu">[sic]</rend>
+									</tempo> -->
+								</measure>
+								<measure xml:id="m-1062" label="49" n="50">
+									<staff xml:id="m-1063" n="1">
+										<layer xml:id="m-1064" n="1">
+											<beam xml:id="m-1068">
+												<chord xml:id="m-1065" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:02:05.498">
+													<note xml:id="m-1066" dur="8" dur.ppq="128" oct="5" pname="c" pnum="72" vel="0"/>
+													<note xml:id="m-1067" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" vel="0"/>
+												</chord>
+												<chord xml:id="m-1069" dur="8" dur.ppq="128" stem.dir="down" tstamp.real="00:02:05.798">
+													<note xml:id="m-1070" dur="8" dur.ppq="128" oct="4" pname="b" pnum="71" vel="0"/>
+													<note xml:id="m-1071" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" vel="0"/>
+												</chord>
+											</beam>
+											<chord xml:id="m-1072" dur="2" dur.ppq="512" stem.dir="down" tstamp.real="00:02:06.098">
+												<note xml:id="m-1073" dur="2" dur.ppq="512" oct="5" pname="d" pnum="74" vel="0"/>
+												<note xml:id="m-1074" dur="2" dur.ppq="512" oct="5" pname="f" pnum="77" vel="0"/>
+											</chord>
+											<beam xml:id="m-1078">
+												<chord xml:id="m-1075" dots="1" dur="8" dur.ppq="192" stem.dir="down" tstamp.real="00:02:07.298">
+													<note xml:id="m-1076" dots="1" dur="8" dur.ppq="192" oct="5" pname="c" pnum="72" vel="0"/>
+													<note xml:id="m-1077" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" vel="0"/>
+												</chord>
+												<chord xml:id="m-1079" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:07.748">
+													<note xml:id="m-1080" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" vel="0"/>
+													<note xml:id="m-1081" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" vel="0"/>
+												</chord>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1082" n="2" visible="false">
+										<layer xml:id="m-1083" n="1">
+											<mRest xml:id="m-1084" tstamp.real="00:02:05.498"/>
+										</layer>
+									</staff>
+								</measure>
+								<measure xml:id="m-1085" label="50" n="51">
+									<staff xml:id="m-1086" n="1">
+										<layer xml:id="m-1087" n="1">
+											<chord xml:id="m-1088" dur="4" dur.ppq="256" stem.dir="down" tstamp.real="00:02:07.898">
+												<note xml:id="m-1089" dur="4" dur.ppq="256" oct="5" pname="e" pnum="76" vel="0"/>
+												<note xml:id="m-1090" dur="4" dur.ppq="256" oct="5" pname="g" pnum="79" vel="0">
+													<accid xml:id="m-1091" accid="n" func="caution"/>
+												</note>
+											</chord>
+											<beam xml:id="m-1095">
+												<chord xml:id="m-1092" dots="1" dur="8" dur.ppq="192" stem.dir="down" tstamp.real="00:02:08.498">
+													<note xml:id="m-1093" dots="1" dur="8" dur.ppq="192" oct="4" pname="b" pnum="71" vel="0"/>
+													<note xml:id="m-1094" dots="1" dur="8" dur.ppq="192" oct="5" pname="d" pnum="74" vel="0"/>
+												</chord>
+												<chord xml:id="m-1096" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:08.948">
+													<note xml:id="m-1097" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" vel="0"/>
+													<note xml:id="m-1098" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" vel="0"/>
+												</chord>
+											</beam>
+											<chord xml:id="m-1099" dur="4" dur.ppq="256" stem.dir="down" tstamp.real="00:02:09.098">
+												<note xml:id="m-1100" dur="4" dur.ppq="256" oct="5" pname="d" pnum="74" vel="0"/>
+												<note xml:id="m-1101" dur="4" dur.ppq="256" oct="5" pname="f" pnum="77" vel="0"/>
+											</chord>
+											<beam xml:id="m-1105">
+												<chord xml:id="m-1102" dots="1" dur="8" dur.ppq="192" stem.dir="down" tstamp.real="00:02:09.698">
+													<note xml:id="m-1103" dots="1" dur="8" dur.ppq="192" oct="4" pname="a" pnum="69" vel="0"/>
+													<note xml:id="m-1104" dots="1" dur="8" dur.ppq="192" oct="5" pname="c" pnum="72" vel="0"/>
+												</chord>
+												<chord xml:id="m-1106" dur="16" dur.ppq="64" stem.dir="down" tstamp.real="00:02:10.148">
+													<note xml:id="m-1107" dur="16" dur.ppq="64" oct="4" pname="b" pnum="71" vel="0"/>
+													<note xml:id="m-1108" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" vel="0"/>
+												</chord>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1109" n="2" visible="false">
+										<layer xml:id="m-1110" n="1">
+											<mRest xml:id="m-1111" tstamp.real="00:02:07.898"/>
+										</layer>
+									</staff>
+								</measure>
+								<measure xml:id="m-1112" label="51" n="52">
+									<staff xml:id="m-1113" n="1">
+										<layer xml:id="m-1114" n="1">
+											<note xml:id="m-1115" dots="1" dur="2" dur.ppq="768" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:02:10.298" vel="0"/>
+											<beam xml:id="m-1118">
+												<note xml:id="m-1117" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="up" tstamp.real="00:02:12.098" vel="0"/>
+												<note xml:id="m-1119" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="up" tstamp.real="00:02:12.548" vel="0"/>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1120" n="2" visible="false">
+										<layer xml:id="m-1121" n="1">
+											<mRest xml:id="m-1122" tstamp.real="00:02:10.298"/>
+										</layer>
+									</staff>
+									<fermata xml:id="m-1116" form="norm" layer="1" shape="curved" staff="1" tstamp="1"/>
+								</measure>
+								<measure xml:id="m-1123" label="52" n="53" right="dbl">
+									<staff xml:id="m-1124" n="1">
+										<layer xml:id="m-1125" n="1">
+											<note xml:id="m-1126" dur="4" dur.ppq="256" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:02:13.598" vel="0"/>
+											<note xml:id="m-1127" dur="4" dur.ppq="256" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:02:14.198" vel="0"/>
+										</layer>
+									</staff>
+									<staff xml:id="m-1128" n="2" visible="false">
+										<layer xml:id="m-1129" n="1">
+											<mRest xml:id="m-1130" tstamp.real="00:02:13.598"/>
+										</layer>
+									</staff>
+									<tempo xml:id="m-1131" layer="1" tstamp="1">
+										<rend xml:id="m-1132" fontsize="4.4375vu">C<supplied resp="#CBM">anto</supplied> in tempo</rend>
+									</tempo>
+									<dir xml:id="m-1134" startid="#m-1127">ecc.</dir>
+								</measure>
+							</del>
+							<add resp="#VB" hand="#VB_brownInk2" place="inline">
+								<!-- interruzione di sistema sul manoscritto -->
+								<sb xml:id="m-1136"/>
+								<measure xml:id="m-1135" label="53" n="54">
+									<staff xml:id="m-1137" n="1">
+										<layer xml:id="m-1138" n="1">
+											<note xml:id="m-1139" dur="2" dur.ppq="512" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:15.998" vel="0"/>
+											<rest xml:id="m-1140" dur="8" dur.ppq="128" tstamp.real="00:02:17.198"/>
+											<beam xml:id="m-1142">
+												<note xml:id="m-1141" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:02:17.498" vel="0"/>
+												<note xml:id="m-1143" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:17.648" vel="0"/>
+											</beam>
+											<beam xml:id="m-1145">
+												<note xml:id="m-1144" dur="16" dur.ppq="64" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:02:17.798" vel="0"/>
+												<note xml:id="m-1146" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" stem.dir="down" tstamp.real="00:02:17.948" vel="0"/>
+												<note xml:id="m-1147" dur="16" dur.ppq="64" oct="4" pname="b" pnum="71" stem.dir="down" tstamp.real="00:02:18.098" vel="0"/>
+												<note xml:id="m-1148" dur="16" dur.ppq="64" oct="4" pname="a" pnum="69" stem.dir="down" tstamp.real="00:02:18.248" vel="0"/>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1149" n="2" visible="false">
+										<layer xml:id="m-1150" n="1">
+											<mRest xml:id="m-1151" tstamp.real="00:02:15.998"/>
+										</layer>
+									</staff>
+								</measure>
+								<measure xml:id="m-1152" label="54" n="55">
+									<staff xml:id="m-1153" n="1">
+										<layer xml:id="m-1154" n="1">
+											<note xml:id="m-1155" dur="2" dur.ppq="512" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:02:18.398" vel="0"/>
+											<beam xml:id="m-1158">
+												<note xml:id="m-1157" dots="1" dur="8" dur.ppq="192" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:02:19.598" vel="0"/>
+												<note xml:id="m-1159" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:02:20.048" vel="0"/>
+											</beam>
+											<beam xml:id="m-1161">
+												<note xml:id="m-1160" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:20.198" vel="0"/>
+												<note xml:id="m-1162" dur="16" dur.ppq="64" oct="5" pname="d" pnum="75" stem.dir="down" tstamp.real="00:02:20.648" vel="0">
+													<accid xml:id="m-1163" accid="s"/>
+												</note>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1164" n="2" visible="false">
+										<layer xml:id="m-1165" n="1">
+											<mRest xml:id="m-1166" tstamp.real="00:02:18.398"/>
+										</layer>
+									</staff>
+									<tie xml:id="m-1156" endid="#m-1157" startid="#m-1155"/>
+								</measure>
+								<measure xml:id="m-1167" label="55" n="56">
+									<staff xml:id="m-1168" n="1">
+										<layer xml:id="m-1169" n="1">
+											<beam xml:id="m-1171">
+												<note xml:id="m-1170" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:20.798" vel="0"/>
+												<note xml:id="m-1172" dur="16" dur.ppq="64" oct="5" pname="a" pnum="81" stem.dir="down" tstamp.real="00:02:21.248" vel="0"/>
+											</beam>
+											<beam xml:id="m-1175">
+												<note xml:id="m-1173" dots="1" dur="8" dur.ppq="192" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:02:21.398" vel="0">
+													<accid xml:id="m-1174" accid="n" func="caution"/>
+												</note>
+												<note xml:id="m-1176" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:02:21.848" vel="0"/>
+											</beam>
+											<beam xml:id="m-1178">
+												<note xml:id="m-1177" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:21.998" vel="0"/>
+												<note xml:id="m-1179" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:02:22.448" vel="0"/>
+											</beam>
+											<beam xml:id="m-1181">
+												<note xml:id="m-1180" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:22.598" vel="0"/>
+												<note xml:id="m-1182" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" stem.dir="down" tstamp.real="00:02:23.048" vel="0"/>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1183" n="2" visible="false">
+										<layer xml:id="m-1184" n="1">
+											<mRest xml:id="m-1185" tstamp.real="00:02:20.798"/>
+										</layer>
+									</staff>
+								</measure>
+								<measure xml:id="m-1186" label="56" n="57">
+									<staff xml:id="m-1188" n="1">
+										<layer xml:id="m-1189" n="1">
+											<beam xml:id="m-1191">
+												<note xml:id="m-1190" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:23.198" vel="0"/>
+												<note xml:id="m-1192" dur="16" dur.ppq="64" oct="4" pname="b" pnum="71" stem.dir="down" tstamp.real="00:02:23.648" vel="0"/>
+											</beam>
+											<beam xml:id="m-1194">
+												<note xml:id="m-1193" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:23.798" vel="0"/>
+												<note xml:id="m-1195" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" stem.dir="down" tstamp.real="00:02:24.248" vel="0"/>
+											</beam>
+											<beam xml:id="m-1197">
+												<note xml:id="m-1196" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:24.398" vel="0"/>
+												<note xml:id="m-1198" dur="16" dur.ppq="64" oct="4" pname="b" pnum="71" stem.dir="down" tstamp.real="00:02:24.848" vel="0"/>
+											</beam>
+											<beam xml:id="m-1200">
+												<note xml:id="m-1199" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:24.998" vel="0"/>
+												<note xml:id="m-1201" dur="16" dur.ppq="64" oct="5" pname="c" pnum="72" stem.dir="down" tstamp.real="00:02:25.448" vel="0"/>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1202" n="2" visible="false">
+										<layer xml:id="m-1203" n="1">
+											<mRest xml:id="m-1204" tstamp.real="00:02:23.198"/>
+										</layer>
+									</staff>
+								</measure>
+								<measure xml:id="m-1205" label="57" n="58">
+									<staff xml:id="m-1206" n="1">
+										<layer xml:id="m-1207" n="1">
+											<note xml:id="m-1208" dur="2" dur.ppq="512" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:25.598" vel="0"/>
+											<rest xml:id="m-1210" dur="4" dur.ppq="256" tstamp.real="00:02:26.798"/>
+											<beam xml:id="m-1212">
+												<note xml:id="m-1211" dots="1" dur="8" dur.ppq="192" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:27.398" vel="0"/>
+												<note xml:id="m-1213" dur="16" dur.ppq="64" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:02:27.848" vel="0"/>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1214" n="2" visible="false">
+										<layer xml:id="m-1215" n="1">
+											<mRest xml:id="m-1216" tstamp.real="00:02:25.598"/>
+										</layer>
+									</staff>
+									<fermata xml:id="m-1209" form="norm" layer="1" shape="curved" staff="1" tstamp="1"/>
+								</measure>
+								<measure xml:id="m-1217" label="58" n="59" right="dbl">
+									<staff xml:id="m-1218" n="1">
+										<layer xml:id="m-1219" n="1">
+											<note xml:id="m-1220" dur="4" dur.ppq="256" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:02:28.598" vel="0"/>
+											<note xml:id="m-1221" dots="1" dur="4" dur.ppq="384" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:02:29.198" vel="0"/>
+											<beam xml:id="m-1223">
+												<note xml:id="m-1222" dur="8" dur.ppq="128" oct="5" pname="f" pnum="77" stem.dir="down" tstamp.real="00:02:30.098" vel="0"/>
+												<note xml:id="m-1224" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:02:30.398" vel="0"/>
+												<note xml:id="m-1225" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:02:30.698" vel="0"/>
+											</beam>
+										</layer>
+									</staff>
+									<staff xml:id="m-1226" n="2" visible="false">
+										<layer xml:id="m-1227" n="1">
+											<mRest xml:id="m-1228" tstamp.real="00:02:28.598"/>
+										</layer>
+									</staff>
+									<tempo xml:id="m-1229" ho="0.4375mm" layer="1" tstamp="1">
+										<rend xml:id="m-1230" fontsize="4.4375vu">P<supplied resp="#CBM">ri</supplied>mo tempo</rend>
+									</tempo>
+									<tempo xml:id="m-1231" layer="1" tstamp="4.5">
+										<rend xml:id="m-1232" fontsize="4.4375vu">D.C.</rend>
+									</tempo>
+								</measure>
+							</add>
+						</subst>
+					</section>
+					<annot xml:id="m-725" type="duration">00:03:25.396</annot>
+				</score>
+			</mdiv>
+		</body>
+
+	</music>
+</mei>

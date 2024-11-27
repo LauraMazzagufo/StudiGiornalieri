@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/5.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/5.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- <!DOCTYPE meiCorpus SYSTEM "mei-all.rng"> -->
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0">
+	<meiHead>
+		<fileDesc>
+			<titleStmt>
+				<title>'Studi giornalieri': 3,VII - edizione digitale</title>
+				<composer>
+					<persName role="creator" corresp="#VB">Vincenzo Bellini</persName>
+				</composer>
+				<respStmt type="transcriber">
+					<resp>Trascrizioni a cura di</resp>
+					<persName corresp="#CBM">Candida Billie Mantica</persName>
+				</respStmt>
+				<respStmt type="encoder" xml:id="m-6">
+					<resp>Codifica a cura di</resp>
+					<persName xml:id="LM">Laura Mazzagufo</persName>
+				</respStmt>
+				<respStmt>
+					<resp xml:id="m-7">Relatori:</resp>
+					<persName xml:id="AMDG">Angelo Mario Del Grosso</persName>
+					<persName xml:id="CBM">Candida Billie Mantica</persName>
+				</respStmt>
+			</titleStmt>
+			<editionStmt>
+				<edition/>
+				<respStmt type="encoder">
+					<resp>Codifica a cura di</resp>
+					<persName corresp="#LM">Laura Mazzagufo</persName>
+				</respStmt>
+			</editionStmt>
+			<pubStmt>
+				<availability>
+					<useRestrict>Disponibile per scopi attinenti alla ricerca accademica o la didattica.</useRestrict>
+				</availability>
+			</pubStmt>
+			<seriesStmt>
+				<title xml:id="m-1">Gli 'studi giornalieri' di Vincenzo Bellini: una proposta di codifica.</title>
+				<title type="subtitle" xml:id="m-2">Rappresentazione dei dati nel contesto biografico, epistolare e genetico-analitico del gruppo di studi correlati al n.9 «Nel mirarti un solo istante» dei 'Puritani'.</title>
+				<contents xml:id="m-5">
+					<p>Edizione redatta in occasione dell'elaborato di tesi di Laurea Magistrale in Informatica Umanistica (UniPi), <date>Febbraio 2023. Qui sono codificati quattro studi della pagina III e uno studio della pagina IV del manoscritto MM.B.36 del Museo Belliniano di Catania, 'studi giornalieri' ritenuti di particolare importanza nell'analisi del processo creativo del compositore o significativamente esemplari per illustrare alcuni dei fenomeni più ricorrenti nel testo musicale.</date></p>
+				</contents>
+			</seriesStmt>
+			<sourceDesc>
+				<source n="1">
+					<bibl corresp="#ms-studi_giornalieri">
+						<title resp="#LM">Autografo degli 'Studi giornalieri'</title>
+						<physLoc>
+							<repository n="I-CATm" corresp="http://www.rism.info/typo3conf/ext/user_apachesolr/result.php?q=id:30003436" role="museum">
+								Museo Belliniano di <settlement>Catania</settlement> (<country>Italy</country>)
+							</repository>
+							<identifier type="folder_siglum">MM-7.164-6.1</identifier>
+							<identifier type="shelfmark">MM.B.36</identifier>
+						</physLoc>
+						<locus>f. 3</locus>
+					</bibl>
+				</source>
+				<source n="2" xml:id="Mantica2020" >
+					<biblStruct xml:id="m-17" target="http://www.bollettinostudibelliniani.eu/wp-content/uploads/2021/04/04-Mantica.pdf">
+						<analytic>
+							<author corresp="#CBM">
+								<persName>
+									<foreName>Candida Billie</foreName>
+									<name>Mantica</name>
+								</persName>
+							</author>
+							<title level="a">Gli 'studi giornalieri' di Bellini «sviluppati con effetto» nei Puritani</title>
+							<identifier type="DOI">10.17422/ISSN.2283-8716/104</identifier>
+						</analytic>
+						<monogr>
+							<title level="j">Bollettino di Studi Belliniani</title>
+							<imprint>
+								<pubPlace>Catania</pubPlace>
+								<publisher>Fondazione Bellini - Centro Studi Belliniani</publisher>
+								<date calendar="2020">2020</date>
+							</imprint>
+							<biblScope unit="volume">6</biblScope>
+							<biblScope unit="page" from="29" to="73">29-73</biblScope>
+						</monogr>
+					</biblStruct>
+				</source>
+			</sourceDesc>
+		</fileDesc>
+		<manifestationList><!-- information about the source(s) regardless of the encoding process -->
+			<manifestation corresp="#ms-studi_giornalieri">
+				<physDesc>
+					<condition>
+						<p>Il manoscritto è in un buon stato di conservazione. Strappi, tracce di muffa e altri segni del tempo si registrano solo sui bordi delle pagine.</p>
+					</condition>
+					<extent unit="page" quantity="20">10 fogli numerati in 20 pagine</extent>
+					<dimensions unit="mm">
+						<height>250</height>
+						<width>350</width>
+					</dimensions>
+					<stamp>
+						<locus>Sul margine destro o sinistro di ciascun foglio</locus> è presente un timbro del
+						<corpName corresp="#museo_belliniano">Museo Belliniano di Catania</corpName>
+					</stamp>
+					<physMedium>
+						<p>Il manoscritto è in carta color sabbia, con inchiostro color marrone chiaro o marrone scuro.</p>
+					</physMedium>
+					<scoreFormat auth="MARC21" auth.uri="https://www.loc.gov/marc/bibliographic/bd008m.html" codedval="20-b">Miniature or study score</scoreFormat>
+					<handList>
+						<hand xml:id="VB_brownInk1" medium="brown_ink" resp="#VB" initial="true"/>
+						<hand xml:id="VB_brownInk2" medium="brown_ink" resp="#VB"/>
+						<hand xml:id="cataloguer_stamp" medium="stamp" resp="#unknown"/>
+						<hand xml:id="cataloguer_brownInk" medium="brown_ink" resp="#unknown"/>
+					</handList>
+				</physDesc>
+				<creation>
+					Una descrizione delle circostanze della genesi degli 'studi giornalieri' è fornita in <ref target="#Mantica2020">Mantica2020</ref> e in <ref target="#DellaSeta2013">DellaSeta2013</ref>.
+				</creation>
+			</manifestation>
+		</manifestationList>
+	</meiHead>
+
+	<music meiversion="5.0">
+		<!-- GENETIC STAGES DESCRIPTION -->
+		<genDesc ordered="true">
+			<!-- 'Studi Giornalieri': studio 3, I -->
+			<genState xml:id="s_1a" label="Studi Giornalieri: 3, I" precedes="#s_1b">
+				<desc>
+					Studio in Si bemolle maggiore, in tempo 4/4.
+					Caratterizzato dall'apertura su un intervallo ascendente di seconda maggiore, in levare.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 3, VII -->
+			<genState xml:id="s_1b" label="Studi Giornalieri: 3, VII" precedes="#s_1c" follows="#s_1a">
+				<desc>
+					Studio in Re maggiore, in tempo 4/4.
+					Caratterizzato dall'apertura su un intervallo discendente di seconda maggiore, su un ritmo puntato.
+					Lo studio è corredato di un testo verbale.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 3, VIII -->
+			<genState xml:id="s_1c" label="Studi Giornalieri: 3, VIII" precedes="#s_1d" follows="#s_1b">
+				<desc>
+					Studio in Si bemolle maggiore, tempo 4/4.
+					Caratterizzato da un intervallo ascendente di seconda minore, in levare, su ritmo puntato, a cui segue un intervallo di seconda maggiore.
+					Presenta una configurazione formale più precisa (una semifrase di quattro battute sospesa sulla dominante, seguita da una semifrase di quattro battute, conclusa sulla tonica).
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 3, IX -->
+			<genState xml:id="s_1d" label="Studi Giornalieri: 3, VII" precedes="#s_1e" follows="#s_1c">
+				<desc>
+					Studio in Si bemolle maggiore, tempo 4/4.
+					Caratterizzato dalla stessa figurazione iniziale di 3, VIII, con semifrasi accorciate a due battute.
+					Lo studio è stato cassato interamente.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+			<!-- 'Studi Giornalieri': studio 4, III -->
+			<genState xml:id="s_1e" label="Studi Giornalieri: 4, III" precedes="#s_2" follows="#s_1d">
+				<desc>
+					Studio in Do maggiore, in tempo 4/4.
+					Lo studio è un abbozzo di sezione di 22 battute che rielabora il profilo melodico di 3, IX.
+					Presenta cancellature e una variante alternativa.
+				</desc>
+				<date notafter="04-08-1834" resp="#CBM">Composto prima del 4 agosto 1834.</date>
+			</genState>
+		</genDesc>
+
+		<front>
+			<div type="sigle_belliniane"><!-- sigle di Bellini -->
+				<p n="1" corresp="sigla1">
+					<choice>
+						<abbr source="#Mantica2020" type="contraction">C: ed ag.</abbr>
+						<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
+					</choice>
+				</p>
+				<p n="2" corresp="sigla2">
+					<choice>
+						<abbr source="#Mantica2020" type="contraction">C. ed ag.</abbr>
+						<expan source="#Mantica2020" resp="#CBM">Cantato ed agito</expan>
+					</choice>
+				</p>
+				<p n="3" corresp="sigla3">
+					<del rend="x-through">
+						<choice>
+							<abbr source="#Mantica2020" type="contraction">P T</abbr>
+							<expan source="#Mantica2020" resp="#CBM" cert="low">Pezzi Teatrali</expan>
+						</choice>	
+					</del>
+				</p>
+			</div>
+			<div type="paratesto">
+				<p>
+					<stamp type="catalogue">
+						<locus n="3">3</locus>
+						<corpName corresp="#museo_belliniano">Museo Belliniano Catania</corpName>
+					</stamp>	
+				</p>
+			</div>
+		</front>
+		<body>
+			<mdiv xml:id="studio_3-VII" type="preliminary_sketch" corresp="#s_1b">
+				<score xml:id="m-320">
+					<scoreDef xml:id="m-321" lyric.name="Times New Roman" meter.count="4" meter.unit="4" meter.visible="false" music.name="Helsinki Std" page.botmar="15mm" page.height="297mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="210mm" ppq="256" spacing.staff="14" spacing.system="20" text.name="Times New Roman" vu.height="0.875mm">
+						<staffGrp xml:id="m-322">
+							<staffGrp xml:id="m-333" n="1" symbol="brace">
+								<staffDef xml:id="m-323" clef.line="2" clef.shape="G" clef.visible="false" key.mode="major" keysig="2s" lines="5" n="1">
+									<label xml:id="m-324">Motivo annotato</label>
+									<instrDef xml:id="m-327" midi.channel="1" midi.pan="53" midi.volume="100"/>
+								</staffDef>
+								<staffDef xml:id="m-328" clef.line="4" clef.shape="F" clef.visible="false" key.mode="major" keysig="2s" lines="5" n="2">
+									<label xml:id="m-329">Accompagnamento o struttura amonica</label>
+									<instrDef xml:id="m-332" midi.channel="1" midi.pan="53" midi.volume="100"/>
+								</staffDef>
+							</staffGrp>
+						</staffGrp>
+					</scoreDef>
+					<section n="2" xml:id="m-334">
+						<relation type="editorial" rel="hasSuccessor" plist="#studio3-7" target="#studio3-8"/>
+						<relation type="editorial" rel="isSuccessorOf" plist="#studio3-7" target="#studio3-1"/>
+						<scoreDef xml:id="m-356" keysig="2s"/>
+						<measure xml:id="m-336" n="17">
+							<staff xml:id="m-339" n="1">
+								<supplied resp="#CBM">
+									<clef line="2" shape="G"/>
+									<meterSig count="4" unit="4"/>
+								</supplied>
+								<layer xml:id="m-340" n="1">
+									<rest xml:id="m-341" dur="2" dur.ppq="512" tstamp.real="00:00:40.8"/>
+									<rest xml:id="m-342" dur="4" dur.ppq="256" tstamp.real="00:00:42"/>
+									<note xml:id="m-343" dots="1" dur="8" dur.ppq="192" oct="5" pname="f" pnum="78" stem.dir="down" tstamp.real="00:00:42.6" vel="0">
+										<accid xml:id="m-344" accid.ges="s"/>
+										<verse xml:id="m-346" n="1">
+											<syl xml:id="m-347">Se</syl>
+										</verse>
+									</note>
+									<note xml:id="m-345" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:00:43.05" vel="0">
+										<verse xml:id="m-348" n="1">
+											<syl xml:id="m-349">non</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+							<staff xml:id="m-350" n="2" visible="false">
+								<supplied resp="#CBM">
+									<clef line="4" shape="F"/>
+									<meterSig count="4" unit="4"/>
+								</supplied>
+								<layer xml:id="m-351" n="1">
+									<mRest xml:id="m-352" tstamp.real="00:00:40.8"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure xml:id="m-357" n="18">
+							<staff xml:id="m-358" n="1">
+								<layer xml:id="m-359" n="1">
+									<beam xml:id="m-362">
+										<note xml:id="m-360" dots="1" dur="8" dur.ppq="192" oct="5" pname="f" pnum="78" stem.dir="down" tstamp.real="00:00:43.2" vel="0">
+											<accid xml:id="m-361" accid.ges="s"/>
+											<verse xml:id="m-370" n="1">
+												<syl xml:id="m-371" con="u">viene</syl>
+											</verse>
+										</note>
+										<note xml:id="m-363" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:00:43.65" vel="0"/>
+									</beam>
+									<note xml:id="m-364" dur="4" dur.ppq="256" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:43.8" vel="0"/>
+									<rest xml:id="m-365" dur="8" dur.ppq="128" tstamp.real="00:00:44.4"/>
+									<note xml:id="m-366" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:44.7" vel="0">
+										<verse xml:id="m-372" n="1">
+											<syl xml:id="m-373">io</syl>
+										</verse>
+									</note>
+									<note xml:id="m-367" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:45" vel="0">
+										<verse xml:id="m-374" n="1">
+											<syl xml:id="m-375">qui</syl>
+										</verse>
+									</note>
+									<note xml:id="m-368" dur="8" dur.ppq="128" oct="5" pname="c" pnum="73" stem.dir="down" tstamp.real="00:00:45.3" vel="0">
+										<accid xml:id="m-369" accid.ges="s"/>
+										<verse xml:id="m-376" n="1">
+											<syl xml:id="m-377">mi</syl>
+										</verse>
+									</note>
+								</layer>
+							</staff>
+							<staff xml:id="m-378" n="2" visible="false">
+								<layer xml:id="m-379" n="1">
+									<mRest xml:id="m-380" tstamp.real="00:00:43.2"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure xml:id="m-381" n="19">
+							<staff xml:id="m-382" n="1">
+								<layer xml:id="m-383" n="1">
+									<beam xml:id="m-385">
+										<note xml:id="m-384" dots="1" dur="8" dur.ppq="192" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:45.6" vel="0">
+											<verse xml:id="m-392" n="1">
+												<syl xml:id="m-393" con="u">moro</syl>
+											</verse>
+										</note>
+										<note xml:id="m-386" dur="16" dur.ppq="64" oct="5" pname="c" pnum="73" stem.dir="down" tstamp.real="00:00:46.05" vel="0">
+											<accid xml:id="m-387" accid.ges="s"/>
+										</note>
+									</beam>
+									<note xml:id="m-388" dur="4" dur.ppq="256" oct="4" pname="b" pnum="71" stem.dir="down" tstamp.real="00:00:46.2" vel="0"/>
+									<rest xml:id="m-389" dur="4" dur.ppq="256" tstamp.real="00:00:46.8"/>
+									<note xml:id="m-390" dur="8" dur.ppq="128" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:00:47.4" vel="0"/>
+									<note xml:id="m-391" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:47.7" vel="0"/>
+								</layer>
+							</staff>
+							<staff xml:id="m-394" n="2" visible="false">
+								<layer xml:id="m-395" n="1">
+									<mRest xml:id="m-396" tstamp.real="00:00:45.6"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure xml:id="m-397" n="20">
+							<staff xml:id="m-399" n="1">
+								<layer xml:id="m-400" n="1">
+									<beam xml:id="m-403">
+										<note xml:id="m-401" dur="8" dur.ppq="128" oct="5" pname="c" pnum="73" stem.dir="down" tstamp.real="00:00:48" vel="0">
+											<accid xml:id="m-402" accid.ges="s"/>
+										</note>
+										<note xml:id="m-404" dur="8" dur.ppq="128" oct="5" pname="b" pnum="83" stem.dir="down" tstamp.real="00:00:48.3" vel="0"/>
+									</beam>
+									<beam xml:id="m-407">
+										<note xml:id="m-405" dur="8" dur.ppq="128" oct="5" pname="b" pnum="82" stem.dir="down" tstamp.real="00:00:48.6" vel="0">
+											<accid xml:id="m-406" accid="f"/>
+										</note>
+										<note xml:id="m-408" dur="8" dur.ppq="128" oct="5" pname="a" pnum="81" stem.dir="down" tstamp.real="00:00:48.9" vel="0"/>
+									</beam>
+									<beam xml:id="m-411">
+										<note xml:id="m-409" dur="8" dur.ppq="128" oct="5" pname="a" pnum="80" stem.dir="down" tstamp.real="00:00:49.2" vel="0">
+											<accid xml:id="m-410" accid="f"/>
+										</note>
+										<note xml:id="m-412" dur="8" dur.ppq="128" oct="5" pname="g" pnum="79" stem.dir="down" tstamp.real="00:00:49.5" vel="0"/>
+										<note xml:id="m-413" dur="8" dur.ppq="128" oct="4" pname="b" pnum="71" stem.dir="down" tstamp.real="00:00:49.8" vel="0"/>
+										<note xml:id="m-414" dur="8" dur.ppq="128" oct="5" pname="c" pnum="73" stem.dir="down" tstamp.real="00:00:50.1" vel="0">
+											<accid xml:id="m-415" accid.ges="s"/>
+										</note>
+									</beam>
+								</layer>
+							</staff>
+							<staff xml:id="m-416" n="2" visible="false">
+								<layer xml:id="m-417" n="1">
+									<mRest xml:id="m-418" tstamp.real="00:00:48"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure xml:id="m-419" n="21">
+							<staff xml:id="m-420" n="1">
+								<layer xml:id="m-421" n="1">
+									<beam xml:id="m-423">
+										<note xml:id="m-422" dots="1" dur="8" dur.ppq="192" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:50.4" vel="0"/>
+										<note xml:id="m-424" dur="16" dur.ppq="64" oct="5" pname="f" pnum="78" stem.dir="down" tstamp.real="00:00:50.85" vel="0">
+											<accid xml:id="m-425" accid.ges="s"/>
+										</note>
+									</beam>
+									<note xml:id="m-426" dur="4" dur.ppq="256" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:00:51" vel="0"/>
+									<rest xml:id="m-427" dur="4" dur.ppq="256" tstamp.real="00:00:51.6"/>
+									<beam xml:id="m-430">
+										<note xml:id="m-428" dots="1" dur="8" dur.ppq="192" oct="5" pname="f" pnum="78" stem.dir="down" tstamp.real="00:00:52.2" vel="0">
+											<accid xml:id="m-429" accid.ges="s"/>
+										</note>
+										<note xml:id="m-431" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:00:52.65" vel="0"/>
+									</beam>
+								</layer>
+							</staff>
+							<staff xml:id="m-432" n="2" visible="false">
+								<layer xml:id="m-433" n="1">
+									<mRest xml:id="m-434" tstamp.real="00:00:50.4"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure xml:id="m-435" n="22">
+							<staff xml:id="m-436" n="1">
+								<layer xml:id="m-437" n="1">
+									<beam xml:id="m-440">
+										<note xml:id="m-438" dots="1" dur="8" dur.ppq="192" oct="5" pname="f" pnum="78" stem.dir="down" tstamp.real="00:00:52.8" vel="0">
+											<accid xml:id="m-439" accid.ges="s"/>
+										</note>
+										<note xml:id="m-441" dur="16" dur.ppq="64" oct="5" pname="e" pnum="76" stem.dir="down" tstamp.real="00:00:53.25" vel="0"/>
+									</beam>
+									<note xml:id="m-442" dur="4" dur.ppq="256" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:53.4" vel="0"/>
+									<beam xml:id="m-445">
+										<note xml:id="m-443" dur="8" dur.ppq="128" oct="5" pname="c" pnum="73" stem.dir="down" tstamp.real="00:00:54" vel="0">
+											<accid xml:id="m-444" accid.ges="s"/>
+										</note>
+										<note xml:id="m-446" dur="8" dur.ppq="128" oct="5" pname="d" pnum="74" stem.dir="down" tstamp.real="00:00:54.3" vel="0"/>
+									</beam>
+									<beam xml:id="m-449">
+										<note xml:id="m-447" dots="1" dur="8" dur.ppq="192" oct="5" pname="f" pnum="78" stem.dir="down" tstamp.real="00:00:54.6" vel="0">
+											<accid xml:id="m-448" accid.ges="s"/>
+										</note>
+										<note xml:id="m-450" dur="16" dur.ppq="64" oct="5" pname="a" pnum="81" stem.dir="down" tstamp.real="00:00:55.05" vel="0"/>
+									</beam>
+								</layer>
+							</staff>
+							<staff xml:id="m-451" n="2" visible="false">
+								<layer xml:id="m-452" n="1">
+									<mRest xml:id="m-453" tstamp.real="00:00:52.8"/>
+								</layer>
+							</staff>
+						</measure>
+						<measure xml:id="m-454" n="23" right="dbl">
+							<staff xml:id="m-455" n="1">
+								<layer xml:id="m-456" n="1">
+									<note xml:id="m-457" dur="4" dur.ppq="256" oct="5" pname="a" pnum="81" stem.dir="down" tstamp.real="00:00:55.2" vel="0"/>
+								</layer>
+							</staff>
+							<staff xml:id="m-458" n="2" visible="false">
+								<layer xml:id="m-459" n="1">
+									<mRest xml:id="m-460" tstamp.real="00:00:55.2"/>
+								</layer>
+							</staff>
+						</measure>
+					</section>
+					<annot xml:id="m-319" type="duration">00:03:25.396</annot>
+					<annot xml:id="link-BDC_1" startid="#m-347" endid="#m-393">
+						<ref target="https://dspace-clarin-it.ilc.cnr.it/repository/xmlui/bitstream/handle/20.500.11752/OPEN-1000/BDC-XML.zip?sequence=1/encoding-main/LL1_26.xml#LL1.26">Il libro ha il gran difetto che non è bene dialogato: le situazioni sono belle, l'espressioni ripetute, comuni, stupide qualche volta, in una parola si vede che chi l'ha scritto non avea ne cuore, ne cognizioni per bene esprimere i sentimenti dei suoi personaggi.</ref>
+						<locus>LL1.26, carta 1r, righe 14 e segg.</locus>
+					</annot>
+				</score>
+			</mdiv>
+		</body>
+	</music>
+</mei>
